@@ -1,0 +1,18 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-TeamProject.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Intermediate\Build\Win64\TeamProjectEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Intermediate\Build\Win64\UE4Editor\Development\TeamProject\TeamProject.cpp.obj"
+"C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Intermediate\Build\Win64\UE4Editor\Development\TeamProject\TeamProjectCharacter.cpp.obj"
+"C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Intermediate\Build\Win64\UE4Editor\Development\TeamProject\TeamProjectGameMode.cpp.obj"
+"C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Intermediate\Build\Win64\UE4Editor\Development\TeamProject\TeamProject.init.gen.cpp.obj"
+"C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Intermediate\Build\Win64\UE4Editor\Development\TeamProject\TeamProjectCharacter.gen.cpp.obj"
+"C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Intermediate\Build\Win64\UE4Editor\Development\TeamProject\TeamProjectGameMode.gen.cpp.obj"
+"C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Intermediate\Build\Win64\UE4Editor\Development\TeamProject\Default.rc2.res"
+/OUT:"C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Intermediate\Build\Win64\UE4Editor\Development\TeamProject\UE4Editor-TeamProject.lib"
+/INCLUDE:IMPLEMENT_MODULE_TeamProject
