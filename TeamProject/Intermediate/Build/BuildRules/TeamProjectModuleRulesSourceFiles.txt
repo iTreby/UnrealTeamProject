@@ -1,3 +1,0 @@
-C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Source\TeamProject\TeamProject.Build.cs
-C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Source\TeamProject.Target.cs
-C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Source\TeamProjectEditor.Target.cs

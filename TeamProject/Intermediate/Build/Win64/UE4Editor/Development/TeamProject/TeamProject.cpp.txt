@@ -1,2 +1,0 @@
-C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Intermediate\Build\Win64\UE4Editor\Development\TeamProject\Definitions.TeamProject.h
-c:\users\robert\desktop\unreal team project\teamproject\source\teamproject\TeamProject.h

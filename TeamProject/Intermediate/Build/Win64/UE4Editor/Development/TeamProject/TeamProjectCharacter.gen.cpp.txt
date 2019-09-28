@@ -1,9 +1,0 @@
-C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Intermediate\Build\Win64\UE4Editor\Development\TeamProject\Definitions.TeamProject.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\Robert\Desktop\Unreal Team project\TeamProject\Source\TeamProject/TeamProjectCharacter.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-c:\users\robert\desktop\unreal team project\teamproject\intermediate\build\win64\ue4editor\inc\teamproject\TeamProjectCharacter.generated.h
