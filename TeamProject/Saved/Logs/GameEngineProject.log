@@ -904,3 +904,47 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2019.10.13-20.30.07:768][536]LogSlate: Window 'ThirdPersonGameMode' being destroyed
 [2019.10.13-20.30.07:769][536]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
 [2019.10.13-20.30.09:101][659]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.10.13-20.35.17:400][727]LogHttp: Warning: 0000020E97C54CC0: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B7963DFDC-41D1-AD99-FB8D-92995D8D461B%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.23.0-8386587%2B%2B%2BUE4%2BRelease-4.23&UserID=54b38c1a4a43b6be681f4d80557221e8%7Ce390a6a837aa4201918b3c904f92bec0%7Cdfa27c6d-af16-4a38-95ba-dc9177795f79&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: -1, actual payload size: 0
+[2019.10.13-20.35.17:400][727]LogHttp: Warning: 0000020E97C54CC0: request failed, libcurl error: 0 (No error)
+[2019.10.13-20.35.17:400][727]LogHttp: Warning: 0000020E97C54CC0: libcurl info message cache 0 (Found bundle for host datarouter.ol.epicgames.com: 0x20e43183f70 [can pipeline])
+[2019.10.13-20.35.17:400][727]LogHttp: Warning: 0000020E97C54CC0: libcurl info message cache 1 (Re-using existing connection! (#9) with host datarouter.ol.epicgames.com)
+[2019.10.13-20.35.17:400][727]LogHttp: Warning: 0000020E97C54CC0: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (52.73.244.215) port 443 (#9))
+[2019.10.13-20.35.17:400][727]LogHttp: Warning: 0000020E97C54CC0: libcurl info message cache 3 (We are completely uploaded and fine)
+[2019.10.13-20.35.17:400][727]LogHttp: Warning: 0000020E97C54CC0: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, Client hello (1):)
+[2019.10.13-20.35.17:400][727]LogHttp: Warning: 0000020E97C54CC0: libcurl info message cache 5 (Connection died, retrying a fresh connect)
+[2019.10.13-20.35.17:400][727]LogHttp: Warning: 0000020E97C54CC0: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2019.10.13-20.35.17:400][727]LogHttp: Warning: 0000020E97C54CC0: libcurl info message cache 7 (Closing connection 9)
+[2019.10.13-20.35.17:400][727]LogHttp: Warning: 0000020E97C54CC0: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, Client hello (1):)
+[2019.10.13-20.35.17:740][728]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B7963DFDC-41D1-AD99-FB8D-92995D8D461B%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.23.0-8386587%2B%2B%2BUE4%2BRelease-4.23&UserID=54b38c1a4a43b6be681f4d80557221e8%7Ce390a6a837aa4201918b3c904f92bec0%7Cdfa27c6d-af16-4a38-95ba-dc9177795f79&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2019.10.13-20.37.03:641][124]LogUObjectHash: Compacting FUObjectHashTables data took   5.64ms
+[2019.10.13-20.37.03:641][124]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap' took 0.118
+[2019.10.13-20.40.17:690][702]LogHttp: Warning: 0000020E97C57D80: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B7963DFDC-41D1-AD99-FB8D-92995D8D461B%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.23.0-8386587%2B%2B%2BUE4%2BRelease-4.23&UserID=54b38c1a4a43b6be681f4d80557221e8%7Ce390a6a837aa4201918b3c904f92bec0%7Cdfa27c6d-af16-4a38-95ba-dc9177795f79&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: -1, actual payload size: 0
+[2019.10.13-20.40.17:690][702]LogHttp: Warning: 0000020E97C57D80: request failed, libcurl error: 56 (Failure when receiving data from the peer)
+[2019.10.13-20.40.17:690][702]LogHttp: Warning: 0000020E97C57D80: libcurl info message cache 0 (Found bundle for host datarouter.ol.epicgames.com: 0x20e43183f70 [can pipeline])
+[2019.10.13-20.40.17:690][702]LogHttp: Warning: 0000020E97C57D80: libcurl info message cache 1 (Re-using existing connection! (#11) with host datarouter.ol.epicgames.com)
+[2019.10.13-20.40.17:690][702]LogHttp: Warning: 0000020E97C57D80: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (54.80.175.210) port 443 (#11))
+[2019.10.13-20.40.17:690][702]LogHttp: Warning: 0000020E97C57D80: libcurl info message cache 3 (We are completely uploaded and fine)
+[2019.10.13-20.40.17:690][702]LogHttp: Warning: 0000020E97C57D80: libcurl info message cache 4 (OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054)
+[2019.10.13-20.40.17:690][702]LogHttp: Warning: 0000020E97C57D80: libcurl info message cache 5 (Connection died, retrying a fresh connect)
+[2019.10.13-20.40.17:690][702]LogHttp: Warning: 0000020E97C57D80: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2019.10.13-20.40.17:690][702]LogHttp: Warning: 0000020E97C57D80: libcurl info message cache 7 (Closing connection 11)
+[2019.10.13-20.40.17:690][702]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B7963DFDC-41D1-AD99-FB8D-92995D8D461B%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.23.0-8386587%2B%2B%2BUE4%2BRelease-4.23&UserID=54b38c1a4a43b6be681f4d80557221e8%7Ce390a6a837aa4201918b3c904f92bec0%7Cdfa27c6d-af16-4a38-95ba-dc9177795f79&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2019.10.13-20.45.00:281][535]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.10.13-20.47.04:443][151]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2019.10.13-20.47.04:443][151]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap' took 0.168
+[2019.10.13-20.56.17:568][790]LogHttp: Warning: 0000020E97C57740: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B7963DFDC-41D1-AD99-FB8D-92995D8D461B%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.23.0-8386587%2B%2B%2BUE4%2BRelease-4.23&UserID=54b38c1a4a43b6be681f4d80557221e8%7Ce390a6a837aa4201918b3c904f92bec0%7Cdfa27c6d-af16-4a38-95ba-dc9177795f79&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: -1, actual payload size: 0
+[2019.10.13-20.56.17:568][790]LogHttp: Warning: 0000020E97C57740: request failed, libcurl error: 0 (No error)
+[2019.10.13-20.56.17:568][790]LogHttp: Warning: 0000020E97C57740: libcurl info message cache 0 (Found bundle for host datarouter.ol.epicgames.com: 0x20e43183f70 [can pipeline])
+[2019.10.13-20.56.17:568][790]LogHttp: Warning: 0000020E97C57740: libcurl info message cache 1 (Re-using existing connection! (#18) with host datarouter.ol.epicgames.com)
+[2019.10.13-20.56.17:568][790]LogHttp: Warning: 0000020E97C57740: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (54.83.181.125) port 443 (#18))
+[2019.10.13-20.56.17:568][790]LogHttp: Warning: 0000020E97C57740: libcurl info message cache 3 (We are completely uploaded and fine)
+[2019.10.13-20.56.17:568][790]LogHttp: Warning: 0000020E97C57740: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, Client hello (1):)
+[2019.10.13-20.56.17:568][790]LogHttp: Warning: 0000020E97C57740: libcurl info message cache 5 (Connection died, retrying a fresh connect)
+[2019.10.13-20.56.17:568][790]LogHttp: Warning: 0000020E97C57740: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2019.10.13-20.56.17:568][790]LogHttp: Warning: 0000020E97C57740: libcurl info message cache 7 (Closing connection 18)
+[2019.10.13-20.56.17:568][790]LogHttp: Warning: 0000020E97C57740: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, Client hello (1):)
+[2019.10.13-20.56.17:569][790]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B7963DFDC-41D1-AD99-FB8D-92995D8D461B%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.23.0-8386587%2B%2B%2BUE4%2BRelease-4.23&UserID=54b38c1a4a43b6be681f4d80557221e8%7Ce390a6a837aa4201918b3c904f92bec0%7Cdfa27c6d-af16-4a38-95ba-dc9177795f79&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2019.10.13-20.57.04:957][929]LogUObjectHash: Compacting FUObjectHashTables data took   1.28ms
+[2019.10.13-20.57.04:957][929]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap' took 0.039
+[2019.10.13-21.07.05:452][860]LogUObjectHash: Compacting FUObjectHashTables data took   1.43ms
+[2019.10.13-21.07.05:452][860]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap' took 0.080
