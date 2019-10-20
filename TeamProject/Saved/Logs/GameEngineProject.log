@@ -1,4 +1,4 @@
-﻿Log file open, 10/14/19 15:58:19
+﻿Log file open, 10/20/19 19:02:08
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
@@ -8,8 +8,8 @@ LogWindows: File 'VtuneApi32e.dll' does not exist
 LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
 LogInit: Display: Running engine for game: GameEngineProject
 LogPlatformFile: Not using cached read wrapper
-LogTaskGraph: Started task graph with 5 named threads and 14 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.058411
+LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.078781
 LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
 LogICUInternationalization: ICU TimeZone Detection - Raw Offset: -5:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -121,13 +121,13 @@ LogInit: Build: ++UE4+Release-4.23-CL-8386587
 LogInit: Engine Version: 4.23.0-8386587+++UE4+Release-4.23
 LogInit: Compatible Engine Version: 4.23.0-8386587+++UE4+Release-4.23
 LogInit: Net CL: 8386587
-LogInit: OS: Windows 10 (Release 1903) (), CPU: Intel(R) Core(TM) i5-4690 CPU @ 3.50GHz, GPU: NVIDIA GeForce GTX 1060 6GB
+LogInit: OS: Windows 10 (Release 1809) (), CPU: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz, GPU: Intel(R) HD Graphics 630
 LogInit: Compiled (64-bit): Aug 31 2019 02:04:44
 LogInit: Compiled with Visual C++: 19.16.27030.01
 LogInit: Build Configuration: Development
 LogInit: Branch Name: ++UE4+Release-4.23
 LogInit: Command Line: 
-LogInit: Base Directory: F:/UnrealEngine/UE_4.23/Engine/Binaries/Win64/
+LogInit: Base Directory: D:/UE_4.23/Engine/Binaries/Win64/
 LogInit: Installed Engine Build: 1
 LogDevObjectVersion: Number of dev versions registered: 23
 LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
@@ -157,688 +157,449 @@ LogInit: Presizing for max 16777216 objects, including 0 objects not considered 
 LogInit: Object subsystem initialized
 LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
 LogConfig: Setting CVar [[r.setres:1280x720]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[r.VSync:0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
-[2019.10.14-19.58.19:657][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:16777216]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
-[2019.10.14-19.58.19:657][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
-[2019.10.14-19.58.19:657][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
-[2019.10.14-19.58.19:668][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2019.10.14-19.58.19:668][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
-[2019.10.14-19.58.19:669][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
-[2019.10.14-19.58.19:669][  0]LogInit: Selected Device Profile: [Windows]
-[2019.10.14-19.58.19:669][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
-[2019.10.14-19.58.19:671][  0]LogHAL: Display: Platform has ~ 8 GB [8536301568 / 8589934592 / 8], which maps to Default [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
-[2019.10.14-19.58.19:671][  0]LogInit: Going up to parent DeviceProfile []
-[2019.10.14-19.58.19:671][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2019.10.14-19.58.19:671][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
-[2019.10.14-19.58.19:672][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
-[2019.10.14-19.58.19:672][  0]LogInit: Computer: DESKTOP-44MF7IJ
-[2019.10.14-19.58.19:672][  0]LogInit: User: jeffc
-[2019.10.14-19.58.19:672][  0]LogInit: CPU Page size=4096, Cores=4
-[2019.10.14-19.58.19:672][  0]LogInit: High frequency timer resolution =10.000000 MHz
-[2019.10.14-19.58.19:673][  0]LogMemory: Memory total: Physical=8.0GB (8GB approx)
-[2019.10.14-19.58.19:673][  0]LogMemory: Platform Memory Stats for Windows
-[2019.10.14-19.58.19:673][  0]LogMemory: Process Physical Memory: 100.55 MB used, 100.55 MB peak
-[2019.10.14-19.58.19:673][  0]LogMemory: Process Virtual Memory: 87.82 MB used, 87.82 MB peak
-[2019.10.14-19.58.19:673][  0]LogMemory: Physical Memory: 5540.68 MB used,  2600.17 MB free, 8140.85 MB total
-[2019.10.14-19.58.19:673][  0]LogMemory: Virtual Memory: 4643.43 MB used,  134213088.00 MB free, 134217728.00 MB total
-[2019.10.14-19.58.19:676][  0]LogWindows: WindowsPlatformFeatures enabled
-[2019.10.14-19.58.19:692][  0]LogInit: Using OS detected language (en-US).
-[2019.10.14-19.58.19:692][  0]LogInit: Using OS detected locale (en-US).
-[2019.10.14-19.58.19:693][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
-[2019.10.14-19.58.19:894][  0]LogInit: Setting process to per monitor DPI aware
-[2019.10.14-19.58.19:939][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
-[2019.10.14-19.58.19:939][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
-[2019.10.14-19.58.20:087][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2019.10.14-19.58.20:087][  0]LogD3D11RHI: D3D11 adapters:
-[2019.10.14-19.58.20:151][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1060 6GB' (Feature Level 11_0)
-[2019.10.14-19.58.20:151][  0]LogD3D11RHI:       6052/0/4070 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
-[2019.10.14-19.58.20:153][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
-[2019.10.14-19.58.20:153][  0]LogD3D11RHI:       0/0/4070 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
-[2019.10.14-19.58.20:153][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
-[2019.10.14-19.58.20:159][  0]LogD3D11RHI: Creating new Direct3DDevice
-[2019.10.14-19.58.20:159][  0]LogD3D11RHI:     GPU DeviceId: 0x1c03 (for the marketing name, search the web for "GPU Device Id")
-[2019.10.14-19.58.20:159][  0]LogWindows: EnumDisplayDevices:
-[2019.10.14-19.58.20:159][  0]LogWindows:    0. 'NVIDIA GeForce GTX 1060 6GB' (P:1 D:1)
-[2019.10.14-19.58.20:159][  0]LogWindows:    1. 'NVIDIA GeForce GTX 1060 6GB' (P:0 D:1)
-[2019.10.14-19.58.20:160][  0]LogWindows:    2. 'NVIDIA GeForce GTX 1060 6GB' (P:0 D:0)
-[2019.10.14-19.58.20:160][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1060 6GB' (P:0 D:0)
-[2019.10.14-19.58.20:160][  0]LogWindows: DebugString: FoundDriverCount:4 
-[2019.10.14-19.58.20:160][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1060 6GB
-[2019.10.14-19.58.20:160][  0]LogD3D11RHI:   Driver Version: 411.63 (internal:24.21.14.1163, unified:411.63)
-[2019.10.14-19.58.20:160][  0]LogD3D11RHI:      Driver Date: 9-18-2018
-[2019.10.14-19.58.20:160][  0]LogRHI: Texture pool is 4236 MB (70% of 6052 MB)
-[2019.10.14-19.58.20:202][  0]LogD3D11RHI: Async texture creation enabled
-[2019.10.14-19.58.20:231][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
-[2019.10.14-19.58.20:571][  0]LogTemp: Display: Module 'AllDesktopTargetPlatform' loaded TargetPlatform 'AllDesktop'
-[2019.10.14-19.58.20:577][  0]LogTemp: Display: Module 'MacClientTargetPlatform' loaded TargetPlatform 'MacClient'
-[2019.10.14-19.58.20:584][  0]LogTemp: Display: Module 'MacNoEditorTargetPlatform' loaded TargetPlatform 'MacNoEditor'
-[2019.10.14-19.58.20:591][  0]LogTemp: Display: Module 'MacServerTargetPlatform' loaded TargetPlatform 'MacServer'
-[2019.10.14-19.58.20:598][  0]LogTemp: Display: Module 'MacTargetPlatform' loaded TargetPlatform 'Mac'
-[2019.10.14-19.58.20:605][  0]LogTemp: Display: Module 'WindowsClientTargetPlatform' loaded TargetPlatform 'WindowsClient'
-[2019.10.14-19.58.20:612][  0]LogTemp: Display: Module 'WindowsNoEditorTargetPlatform' loaded TargetPlatform 'WindowsNoEditor'
-[2019.10.14-19.58.20:619][  0]LogTemp: Display: Module 'WindowsServerTargetPlatform' loaded TargetPlatform 'WindowsServer'
-[2019.10.14-19.58.20:622][  0]LogTemp: Display: Module 'WindowsTargetPlatform' loaded TargetPlatform 'Windows'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTC'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATC'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXT'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1a'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTC'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'AndroidClient'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTCClient'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATCClient'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXTClient'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1Client'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1aClient'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2Client'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTCClient'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_Multi'
-[2019.10.14-19.58.20:652][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_MultiClient'
-[2019.10.14-19.58.20:653][  0]LogTemp: Display: Module 'HTML5TargetPlatform' loaded TargetPlatform 'HTML5'
-[2019.10.14-19.58.20:667][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOSClient'
-[2019.10.14-19.58.20:667][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOS'
-[2019.10.14-19.58.20:679][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOSClient'
-[2019.10.14-19.58.20:679][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOS'
-[2019.10.14-19.58.20:685][  0]LogTemp: Display: Module 'LinuxClientTargetPlatform' loaded TargetPlatform 'LinuxClient'
-[2019.10.14-19.58.20:692][  0]LogTemp: Display: Module 'LinuxNoEditorTargetPlatform' loaded TargetPlatform 'LinuxNoEditor'
-[2019.10.14-19.58.20:698][  0]LogTemp: Display: Module 'LinuxServerTargetPlatform' loaded TargetPlatform 'LinuxServer'
-[2019.10.14-19.58.20:705][  0]LogTemp: Display: Module 'LinuxTargetPlatform' loaded TargetPlatform 'Linux'
-[2019.10.14-19.58.20:729][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'Lumin'
-[2019.10.14-19.58.20:729][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'LuminClient'
-[2019.10.14-19.58.20:729][  0]LogTargetPlatformManager: Display: Building Assets For Windows
-[2019.10.14-19.58.20:735][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
-[2019.10.14-19.58.20:768][  0]LogShaderCompilers: Guid format shader working directory is -1 characters bigger than the processId version (../../../../repos/UnrealTeamProject/TeamProject/Intermediate/Shaders/WorkingDirectory/7580/).
-[2019.10.14-19.58.20:768][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/jeffc/AppData/Local/Temp/UnrealShaderWorkingDir/0496187E477D987060B174AB6E912CD8/'.
-[2019.10.14-19.58.20:769][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
-[2019.10.14-19.58.20:769][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
-[2019.10.14-19.58.20:769][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
-[2019.10.14-19.58.21:362][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
-[2019.10.14-19.58.21:412][  0]LogDerivedDataCache: Loaded boot cache 0.05s 73MB C:/Users/jeffc/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc.
-[2019.10.14-19.58.21:412][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/jeffc/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc
-[2019.10.14-19.58.21:412][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../repos/UnrealTeamProject/TeamProject/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
-[2019.10.14-19.58.21:412][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
-[2019.10.14-19.58.21:412][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../repos/UnrealTeamProject/TeamProject/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.10.14-19.58.21:412][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
-[2019.10.14-19.58.21:423][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
-[2019.10.14-19.58.21:423][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.10.14-19.58.21:423][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
-[2019.10.14-19.58.21:425][  0]LogDerivedDataCache: Using Local data cache path C:/Users/jeffc/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
-[2019.10.14-19.58.21:425][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
-[2019.10.14-19.58.21:425][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
-[2019.10.14-19.58.21:445][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
-[2019.10.14-19.58.21:448][  0]LogSlate: Using FreeType 2.6.0
-[2019.10.14-19.58.21:448][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2019.10.14-19.58.21:495][  0]LogAssetRegistry: FAssetRegistry took 0.0021 seconds to start up
-[2019.10.14-19.58.21:743][  0]LogInit: Selected Device Profile: [Windows]
-[2019.10.14-19.58.21:877][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
-[2019.10.14-19.58.21:877][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
-[2019.10.14-19.58.21:877][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
-[2019.10.14-19.58.21:877][  0]LogMeshReduction: No distributed automatic mesh merging module available
-[2019.10.14-19.58.21:877][  0]LogMeshMerging: No distributed automatic mesh merging module available
-[2019.10.14-19.58.21:886][  0]LogNetVersion: GameEngineProject 1.0.0, NetCL: 8386587, EngineNetVer: 11, GameNetVer: 0 (Checksum: 849915707)
-[2019.10.14-19.58.22:317][  0]LogPackageLocalizationCache: Processed 12 localized package path(s) for 1 prioritized culture(s) in 0.040979 seconds
-[2019.10.14-19.58.22:326][  0]LogUObjectArray: 43444 objects as part of root set at end of initial load.
-[2019.10.14-19.58.22:326][  0]LogUObjectAllocator: 7548648 out of 0 bytes used by permanent object pool.
-[2019.10.14-19.58.22:326][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2019.10.14-19.58.23:029][  0]LogTcpMessaging: Initializing TcpMessaging bridge
-[2019.10.14-19.58.23:031][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
-[2019.10.14-19.58.23:077][  0]SourceControl: Source control is disabled
-[2019.10.14-19.58.23:077][  0]SourceControl: Source control is disabled
-[2019.10.14-19.58.23:078][  0]SourceControl: Source control is disabled
-[2019.10.14-19.58.23:079][  0]SourceControl: Source control is disabled
-[2019.10.14-19.58.23:153][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
-[2019.10.14-19.58.23:309][  0]LogOcInput: OculusInput pre-init called
-[2019.10.14-19.58.23:314][  0]LogWindows: Failed to load 'OVRPlugin.dll' (GetLastError=126)
-[2019.10.14-19.58.23:314][  0]LogWindows: File 'OVRPlugin.dll' does not exist
-[2019.10.14-19.58.23:376][  0]LogEngine: Initializing Engine...
-[2019.10.14-19.58.23:376][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2019.10.14-19.58.23:377][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
-[2019.10.14-19.58.23:601][  0]LogInit: Initializing FReadOnlyCVARCache
-[2019.10.14-19.58.23:611][  0]LogAIModule: Creating AISystem for world Untitled
-[2019.10.14-19.58.23:703][  0]LogInit: XAudio2 using 'Speakers (3- C-Media USB Audio Device   )' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
-[2019.10.14-19.58.23:717][  0]LogInit: FAudioDevice initialized.
-[2019.10.14-19.58.23:718][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
-[2019.10.14-19.58.23:953][  0]LogDerivedDataCache: Saved boot cache 0.24s 73MB C:/Users/jeffc/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc.
-[2019.10.14-19.58.23:965][  0]LogInit: Texture streaming: Enabled
-[2019.10.14-19.58.23:979][  0]LogEngineSessionManager: EngineSessionManager initialized
-[2019.10.14-19.58.24:044][  0]LogInit: Transaction tracking system initialized
-[2019.10.14-19.58.24:069][  0]BlueprintLog: New page: Editor Load
-[2019.10.14-19.58.24:124][  0]LocalizationService: Localization service is disabled
-[2019.10.14-19.58.24:345][  0]LogFileCache: Scanning file cache for directory 'F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Content/' took 0.01s
-[2019.10.14-19.58.24:345][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
-[2019.10.14-19.58.24:345][  0]LogCook: Display: Mobile HDR setting 1
-[2019.10.14-19.58.24:495][  0]SourceControl: Source control is disabled
-[2019.10.14-19.58.24:495][  0]Cmd: MAP LOAD FILE="../../../../repos/UnrealTeamProject/TeamProject/Content/ThirdPersonBP/Maps/ThirdPersonExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
-[2019.10.14-19.58.24:496][  0]LightingResults: New page: Lighting Build
-[2019.10.14-19.58.24:497][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-19.58.24:498][  0]MapCheck: New page: Map Check
-[2019.10.14-19.58.24:498][  0]LightingResults: New page: Lighting Build
-[2019.10.14-19.58.24:520][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.84ms
-[2019.10.14-19.58.24:539][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cc': Can't find file.
-[2019.10.14-19.58.24:540][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cc': Can't find file.
-[2019.10.14-19.58.24:540][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cd': Can't find file.
-[2019.10.14-19.58.24:540][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cd': Can't find file.
-[2019.10.14-19.58.24:540][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cu': Can't find file.
-[2019.10.14-19.58.24:540][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cu': Can't find file.
-[2019.10.14-19.58.24:540][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_lc': Can't find file.
-[2019.10.14-19.58.24:540][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_lc': Can't find file.
-[2019.10.14-19.58.24:540][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_ld': Can't find file.
-[2019.10.14-19.58.24:540][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_ld': Can't find file.
-[2019.10.14-19.58.24:540][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_lu': Can't find file.
-[2019.10.14-19.58.24:541][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_lu': Can't find file.
-[2019.10.14-19.58.24:541][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_rc': Can't find file.
-[2019.10.14-19.58.24:541][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_rc': Can't find file.
-[2019.10.14-19.58.24:541][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_rd': Can't find file.
-[2019.10.14-19.58.24:541][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_rd': Can't find file.
-[2019.10.14-19.58.24:541][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_ru': Can't find file.
-[2019.10.14-19.58.24:541][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_ru': Can't find file.
-[2019.10.14-19.58.24:542][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cc': Can't find file.
-[2019.10.14-19.58.24:542][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cc': Can't find file.
-[2019.10.14-19.58.24:542][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cd': Can't find file.
-[2019.10.14-19.58.24:542][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cd': Can't find file.
-[2019.10.14-19.58.24:542][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cu': Can't find file.
-[2019.10.14-19.58.24:542][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cu': Can't find file.
-[2019.10.14-19.58.24:543][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_lc': Can't find file.
-[2019.10.14-19.58.24:543][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_lc': Can't find file.
-[2019.10.14-19.58.24:543][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_ld': Can't find file.
-[2019.10.14-19.58.24:543][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_ld': Can't find file.
-[2019.10.14-19.58.24:543][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_lu': Can't find file.
-[2019.10.14-19.58.24:543][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_lu': Can't find file.
-[2019.10.14-19.58.24:543][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_rc': Can't find file.
-[2019.10.14-19.58.24:543][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_rc': Can't find file.
-[2019.10.14-19.58.24:543][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_rd': Can't find file.
-[2019.10.14-19.58.24:543][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_rd': Can't find file.
-[2019.10.14-19.58.24:543][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_ru': Can't find file.
-[2019.10.14-19.58.24:543][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_ru': Can't find file.
-[2019.10.14-19.58.24:770][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cc': Can't find file.
-[2019.10.14-19.58.24:770][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_cc.aim_cc Referenced by AO_Character
-[2019.10.14-19.58.24:770][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cc': Can't find file.
-[2019.10.14-19.58.24:770][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_cc.aim_cc Referenced by AO_Character
-[2019.10.14-19.58.24:770][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cd': Can't find file.
-[2019.10.14-19.58.24:770][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_cd.aim_cd Referenced by AO_Character
-[2019.10.14-19.58.24:770][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cd': Can't find file.
-[2019.10.14-19.58.24:770][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_cd.aim_cd Referenced by AO_Character
-[2019.10.14-19.58.24:771][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cu': Can't find file.
-[2019.10.14-19.58.24:771][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_cu.aim_cu Referenced by AO_Character
-[2019.10.14-19.58.24:771][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cu': Can't find file.
-[2019.10.14-19.58.24:771][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_cu.aim_cu Referenced by AO_Character
-[2019.10.14-19.58.24:771][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_lc': Can't find file.
-[2019.10.14-19.58.24:771][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_lc.aim_lc Referenced by AO_Character
-[2019.10.14-19.58.24:771][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_lc': Can't find file.
-[2019.10.14-19.58.24:771][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_lc.aim_lc Referenced by AO_Character
-[2019.10.14-19.58.24:771][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_ld': Can't find file.
-[2019.10.14-19.58.24:771][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_ld.aim_ld Referenced by AO_Character
-[2019.10.14-19.58.24:771][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_ld': Can't find file.
-[2019.10.14-19.58.24:771][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_ld.aim_ld Referenced by AO_Character
-[2019.10.14-19.58.24:771][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_lu': Can't find file.
-[2019.10.14-19.58.24:771][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_lu.aim_lu Referenced by AO_Character
-[2019.10.14-19.58.24:771][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_lu': Can't find file.
-[2019.10.14-19.58.24:771][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_lu.aim_lu Referenced by AO_Character
-[2019.10.14-19.58.24:772][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_rd': Can't find file.
-[2019.10.14-19.58.24:772][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_rd.aim_rd Referenced by AO_Character
-[2019.10.14-19.58.24:772][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_rd': Can't find file.
-[2019.10.14-19.58.24:772][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_rd.aim_rd Referenced by AO_Character
-[2019.10.14-19.58.24:772][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_ru': Can't find file.
-[2019.10.14-19.58.24:772][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_ru.aim_ru Referenced by AO_Character
-[2019.10.14-19.58.24:772][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_ru': Can't find file.
-[2019.10.14-19.58.24:772][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_ru.aim_ru Referenced by AO_Character
-[2019.10.14-19.58.24:772][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_rc': Can't find file.
-[2019.10.14-19.58.24:772][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_rc.aim_rc Referenced by AO_Character
-[2019.10.14-19.58.24:772][  0]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/ABP_Character.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_rc': Can't find file.
-[2019.10.14-19.58.24:772][  0]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_rc.aim_rc Referenced by AO_Character
-[2019.10.14-19.58.25:267][  0]LoadErrors: Error: The BlendSpace  AO_Character  has sample with no animation. Recommend to remove sample point or set new animation.
-[2019.10.14-19.58.25:271][  0]LoadErrors: Error: The BlendSpace  AO_Character  has sample with no animation. Recommend to remove sample point or set new animation.
-[2019.10.14-19.58.25:275][  0]LoadErrors: Error: The BlendSpace  AO_Character  has sample with no animation. Recommend to remove sample point or set new animation.
-[2019.10.14-19.58.25:278][  0]LoadErrors: Error: The BlendSpace  AO_Character  has sample with no animation. Recommend to remove sample point or set new animation.
-[2019.10.14-19.58.25:280][  0]LoadErrors: Error: The BlendSpace  AO_Character  has sample with no animation. Recommend to remove sample point or set new animation.
-[2019.10.14-19.58.25:282][  0]LoadErrors: Error: The BlendSpace  AO_Character  has sample with no animation. Recommend to remove sample point or set new animation.
-[2019.10.14-19.58.25:284][  0]LoadErrors: Error: The BlendSpace  AO_Character  has sample with no animation. Recommend to remove sample point or set new animation.
-[2019.10.14-19.58.25:286][  0]LoadErrors: Error: The BlendSpace  AO_Character  has sample with no animation. Recommend to remove sample point or set new animation.
-[2019.10.14-19.58.25:288][  0]LoadErrors: Error: The BlendSpace  AO_Character  has sample with no animation. Recommend to remove sample point or set new animation.
-[2019.10.14-19.58.25:881][  0]LogAIModule: Creating AISystem for world ThirdPersonExampleMap
-[2019.10.14-19.58.25:891][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2019.10.14-19.58.25:916][  0]LogUObjectHash: Compacting FUObjectHashTables data took   2.22ms
-[2019.10.14-19.58.25:916][  0]Cmd: MAP CHECKDEP NOCLEARLOG
-[2019.10.14-19.58.25:917][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.124ms to complete.
-[2019.10.14-19.58.25:917][  0]LogFileHelpers: Loading map 'ThirdPersonExampleMap' took 1.421
-[2019.10.14-19.58.26:056][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.10.14-19.58.26:064][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.10.14-19.58.26:071][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.10.14-19.58.26:078][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.10.14-19.58.26:087][  0]LogCollectionManager: Loaded 0 collections in 0.000790 seconds
-[2019.10.14-19.58.26:093][  0]LogFileCache: Scanning file cache for directory 'F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Saved/Collections/' took 0.00s
-[2019.10.14-19.58.26:094][  0]LogFileCache: Scanning file cache for directory 'F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Content/Developers/jeffc/Collections/' took 0.00s
-[2019.10.14-19.58.26:094][  0]LogFileCache: Scanning file cache for directory 'F:/UnrealEngine/repos/UnrealTeamProject/TeamProject/Content/Collections/' took 0.00s
-[2019.10.14-19.58.26:094][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000002 seconds
-[2019.10.14-19.58.26:102][  0]LogContentBrowser: Native class hierarchy populated in 0.0078 seconds. Added 2863 classes and 680 folders.
-[2019.10.14-19.58.26:111][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0002 seconds. Added 0 classes and 0 folders.
-[2019.10.14-19.58.26:435][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0003 seconds. Added 0 classes and 0 folders.
-[2019.10.14-19.58.26:441][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0003 seconds. Added 1 classes and 2 folders.
-[2019.10.14-19.58.26:454][  0]LogSlate: Took 0.000144 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
-[2019.10.14-19.58.26:456][  0]LogSlate: Took 0.000126 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
-[2019.10.14-19.58.26:466][  0]LogSlate: Took 0.006600 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
-[2019.10.14-19.58.26:586][  0]LogRenderer: Reallocating scene render targets to support 1208x572 Format 10 NumSamples 1 (Frame:1).
-[2019.10.14-19.58.26:714][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0002 seconds. Added 0 classes and 0 folders.
-[2019.10.14-19.58.26:714][  0]LogLoad: (Engine Initialization) Total time: 7.74 seconds
-[2019.10.14-19.58.26:714][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
-[2019.10.14-19.58.26:775][  0]LogContentStreaming: Texture pool size now 1000 MB
-[2019.10.14-19.58.26:777][  0]LogSlate: FSceneViewport::OnFocusLost() reason 5
-[2019.10.14-19.58.26:851][  0]LogSlate: Took 0.005668 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2019.10.14-19.58.26:997][  2]LogAssetRegistry: Asset discovery search completed in 5.5024 seconds
-[2019.10.14-19.58.27:000][  2]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000004 seconds (found 0 objects)
-[2019.10.14-19.58.27:000][  2]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000060 seconds (updated 0 objects)
-[2019.10.14-19.58.37:921][881]LogSlate: FSceneViewport::OnFocusLost() reason 2
-[2019.10.14-19.58.39:031][ 13]LogSlate: Window 'Message Log' being destroyed
-[2019.10.14-19.58.39:035][ 13]LogSlate: Window 'Message Log' being destroyed
-[2019.10.14-19.58.39:578][ 78]LogTemp: Repeating last play command: New Editor Window (PIE)
-[2019.10.14-19.58.39:597][ 78]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
-[2019.10.14-19.58.39:597][ 78]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2019.10.14-19.58.39:599][ 78]PIE: New page: PIE session: ThirdPersonExampleMap (Oct 14, 2019, 11:58:39 AM)
-[2019.10.14-19.58.39:600][ 78]LogOnline: OSS: Creating online subsystem instance for: NULL
-[2019.10.14-19.58.39:601][ 78]LogPlayLevel: Creating play world package: /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap
-[2019.10.14-19.58.39:615][ 78]LogPlayLevel: PIE: StaticDuplicateObject took: (0.013741s)
-[2019.10.14-19.58.39:616][ 78]LogAIModule: Creating AISystem for world ThirdPersonExampleMap
-[2019.10.14-19.58.39:617][ 78]LogPlayLevel: PIE: World Init took: (0.001799s)
-[2019.10.14-19.58.39:617][ 78]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap to /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap.ThirdPersonExampleMap (0.015767s)
-[2019.10.14-19.58.39:638][ 78]LogUObjectHash: Compacting FUObjectHashTables data took   1.36ms
-[2019.10.14-19.58.39:660][ 78]LogInit: XAudio2 using 'Speakers (3- C-Media USB Audio Device   )' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
-[2019.10.14-19.58.39:669][ 78]LogInit: FAudioDevice initialized.
-[2019.10.14-19.58.39:678][ 78]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.10.14-19.58.39:682][ 78]LogLoad: Game class is 'ThirdPersonGameMode_C'
-[2019.10.14-19.58.39:684][ 78]LogWorld: Bringing World /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap.ThirdPersonExampleMap up for play (max tick rate 0) at 2019.10.14-15.58.39
-[2019.10.14-19.58.39:685][ 78]LogWorld: Bringing up level for play took: 0.002083
-[2019.10.14-19.58.39:685][ 78]LogOnline: OSS: Creating online subsystem instance for: :Context_2
-[2019.10.14-19.58.39:691][ 78]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0003 seconds. Added 20 classes and 0 folders.
-[2019.10.14-19.58.39:696][ 78]PIE: Play in editor start time for /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap 0.517
-[2019.10.14-19.58.39:697][ 78]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
-[2019.10.14-19.58.39:740][ 79]LogRenderer: Reallocating scene render targets to support 1280x720 Format 10 NumSamples 1 (Frame:1).
-[2019.10.14-19.58.45:548][761]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
-[2019.10.14-19.58.45:548][761]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.10.14-19.58.45:548][761]LogWorld: BeginTearingDown for /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap
-[2019.10.14-19.58.45:566][761]LogSlate: Window 'GameEngineProject Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
-[2019.10.14-19.58.45:569][761]LogWorld: UWorld::CleanupWorld for ThirdPersonExampleMap, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-19.58.45:579][761]LogPlayLevel: Display: Shutting down PIE online subsystems
-[2019.10.14-19.58.45:579][761]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
-[2019.10.14-19.58.45:608][761]LogUObjectHash: Compacting FUObjectHashTables data took   1.74ms
-[2019.10.14-19.58.45:651][764]LogPlayLevel: Display: Destroying online subsystem :Context_2
-[2019.10.14-19.58.50:708][212]LogSlate: Took 0.000174 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2019.10.14-19.58.50:717][212]LogAssetEditorManager: Opening Asset editor for AimOffsetBlendSpace /Game/CharacterV2/Animation/AimOffset/Rifle/AO_Character.AO_Character
-[2019.10.14-19.58.50:726][212]LogContentBrowser: Native class hierarchy updated for 'SkeletonEditor' in 0.0002 seconds. Added 1 classes and 2 folders.
-[2019.10.14-19.58.51:018][212]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_1:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
-[2019.10.14-19.58.51:021][212]LogContentBrowser: Native class hierarchy updated for 'PinnedCommandList' in 0.0002 seconds. Added 1 classes and 0 folders.
-[2019.10.14-19.58.51:061][212]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_1:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
-[2019.10.14-19.58.51:385][212]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
-[2019.10.14-19.59.21:924][ 49]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.10.14-19.59.42:764][ 20]LogSlate: Window 'AO_Character' being destroyed
-[2019.10.14-19.59.42:766][ 20]LogSlate: Window 'AO_Character' being destroyed
-[2019.10.14-19.59.42:767][ 20]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-19.59.42:902][ 20]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-19.59.43:715][ 76]LogTemp: Repeating last play command: New Editor Window (PIE)
-[2019.10.14-19.59.43:732][ 76]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
-[2019.10.14-19.59.43:732][ 76]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2019.10.14-19.59.43:732][ 76]PIE: New page: PIE session: ThirdPersonExampleMap (Oct 14, 2019, 11:59:43 AM)
-[2019.10.14-19.59.43:732][ 76]LogPlayLevel: Creating play world package: /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap
-[2019.10.14-19.59.43:743][ 76]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011088s)
-[2019.10.14-19.59.43:744][ 76]LogAIModule: Creating AISystem for world ThirdPersonExampleMap
-[2019.10.14-19.59.43:745][ 76]LogPlayLevel: PIE: World Init took: (0.001226s)
-[2019.10.14-19.59.43:745][ 76]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap to /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap.ThirdPersonExampleMap (0.012507s)
-[2019.10.14-19.59.43:767][ 76]LogUObjectHash: Compacting FUObjectHashTables data took   1.92ms
-[2019.10.14-19.59.43:791][ 76]LogInit: XAudio2 using 'Speakers (3- C-Media USB Audio Device   )' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
-[2019.10.14-19.59.43:800][ 76]LogInit: FAudioDevice initialized.
-[2019.10.14-19.59.43:808][ 76]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.10.14-19.59.43:808][ 76]LogLoad: Game class is 'ThirdPersonGameMode_C'
-[2019.10.14-19.59.43:810][ 76]LogWorld: Bringing World /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap.ThirdPersonExampleMap up for play (max tick rate 0) at 2019.10.14-15.59.43
-[2019.10.14-19.59.43:810][ 76]LogWorld: Bringing up level for play took: 0.001675
-[2019.10.14-19.59.43:811][ 76]LogOnline: OSS: Creating online subsystem instance for: :Context_9
-[2019.10.14-19.59.43:816][ 76]PIE: Play in editor start time for /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap 0.637
-[2019.10.14-19.59.43:816][ 76]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
-[2019.10.14-19.59.54:018][295]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
-[2019.10.14-19.59.54:018][295]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.10.14-19.59.54:018][295]LogWorld: BeginTearingDown for /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap
-[2019.10.14-19.59.54:035][295]LogSlate: Window 'GameEngineProject Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
-[2019.10.14-19.59.54:039][295]LogWorld: UWorld::CleanupWorld for ThirdPersonExampleMap, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-19.59.54:044][295]LogPlayLevel: Display: Shutting down PIE online subsystems
-[2019.10.14-19.59.54:044][295]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
-[2019.10.14-19.59.54:072][295]LogUObjectHash: Compacting FUObjectHashTables data took   1.77ms
-[2019.10.14-19.59.54:121][299]LogPlayLevel: Display: Destroying online subsystem :Context_9
-[2019.10.14-19.59.56:029][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cd': Can't find file.
-[2019.10.14-19.59.56:029][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cd': Can't find file.
-[2019.10.14-19.59.56:030][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CC': Can't find file.
-[2019.10.14-19.59.56:030][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CC': Can't find file.
-[2019.10.14-19.59.56:030][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CL': Can't find file.
-[2019.10.14-19.59.56:030][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CL': Can't find file.
-[2019.10.14-19.59.56:030][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CR': Can't find file.
-[2019.10.14-19.59.56:030][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CR': Can't find file.
-[2019.10.14-19.59.56:030][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DL': Can't find file.
-[2019.10.14-19.59.56:030][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DL': Can't find file.
-[2019.10.14-19.59.56:030][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DR': Can't find file.
-[2019.10.14-19.59.56:030][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DR': Can't find file.
-[2019.10.14-19.59.56:031][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UC': Can't find file.
-[2019.10.14-19.59.56:031][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UC': Can't find file.
-[2019.10.14-19.59.56:031][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UL': Can't find file.
-[2019.10.14-19.59.56:031][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UL': Can't find file.
-[2019.10.14-19.59.56:031][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UR': Can't find file.
-[2019.10.14-19.59.56:031][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UR': Can't find file.
-[2019.10.14-19.59.56:032][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cd': Can't find file.
-[2019.10.14-19.59.56:032][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cd': Can't find file.
-[2019.10.14-19.59.56:032][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CC': Can't find file.
-[2019.10.14-19.59.56:032][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CC': Can't find file.
-[2019.10.14-19.59.56:032][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CL': Can't find file.
-[2019.10.14-19.59.56:032][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CL': Can't find file.
-[2019.10.14-19.59.56:032][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CR': Can't find file.
-[2019.10.14-19.59.56:032][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CR': Can't find file.
-[2019.10.14-19.59.56:032][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DL': Can't find file.
-[2019.10.14-19.59.56:033][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DL': Can't find file.
-[2019.10.14-19.59.56:033][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DR': Can't find file.
-[2019.10.14-19.59.56:033][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DR': Can't find file.
-[2019.10.14-19.59.56:033][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UC': Can't find file.
-[2019.10.14-19.59.56:033][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UC': Can't find file.
-[2019.10.14-19.59.56:033][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UL': Can't find file.
-[2019.10.14-19.59.56:033][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UL': Can't find file.
-[2019.10.14-19.59.56:033][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UR': Can't find file.
-[2019.10.14-19.59.56:033][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UR': Can't find file.
-[2019.10.14-19.59.56:034][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CC': Can't find file.
-[2019.10.14-19.59.56:034][527]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CC.Offset_CC Referenced by AO_Character_Aiming
-[2019.10.14-19.59.56:034][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CC': Can't find file.
-[2019.10.14-19.59.56:034][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cd': Can't find file.
-[2019.10.14-19.59.56:034][527]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses/aim_cd.aim_cd Referenced by AO_Character_Aiming
-[2019.10.14-19.59.56:034][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses/aim_cd': Can't find file.
-[2019.10.14-19.59.56:034][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UC': Can't find file.
-[2019.10.14-19.59.56:034][527]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UC.Offset_UC Referenced by AO_Character_Aiming
-[2019.10.14-19.59.56:034][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UC': Can't find file.
-[2019.10.14-19.59.56:034][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CL': Can't find file.
-[2019.10.14-19.59.56:035][527]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CL.Offset_CL Referenced by AO_Character_Aiming
-[2019.10.14-19.59.56:035][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CL': Can't find file.
-[2019.10.14-19.59.56:035][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DL': Can't find file.
-[2019.10.14-19.59.56:035][527]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DL.Offset_DL Referenced by AO_Character_Aiming
-[2019.10.14-19.59.56:035][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DL': Can't find file.
-[2019.10.14-19.59.56:035][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UL': Can't find file.
-[2019.10.14-19.59.56:035][527]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UL.Offset_UL Referenced by AO_Character_Aiming
-[2019.10.14-19.59.56:035][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UL': Can't find file.
-[2019.10.14-19.59.56:035][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DR': Can't find file.
-[2019.10.14-19.59.56:035][527]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DR.Offset_DR Referenced by AO_Character_Aiming
-[2019.10.14-19.59.56:035][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_DR': Can't find file.
-[2019.10.14-19.59.56:035][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UR': Can't find file.
-[2019.10.14-19.59.56:036][527]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UR.Offset_UR Referenced by AO_Character_Aiming
-[2019.10.14-19.59.56:036][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_UR': Can't find file.
-[2019.10.14-19.59.56:036][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CR': Can't find file.
-[2019.10.14-19.59.56:036][527]LoadErrors: Failed to load /Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CR.Offset_CR Referenced by AO_Character_Aiming
-[2019.10.14-19.59.56:036][527]LogLinker: Warning: While loading '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.uasset' failed to load '/Game/CharacterV2/Animation/AimOffset/Poses_Aiming/Offset_CR': Can't find file.
-[2019.10.14-19.59.56:036][527]LoadErrors: Error: The BlendSpace  AO_Character_Aiming  has sample with no animation. Recommend to remove sample point or set new animation.
-[2019.10.14-19.59.56:093][527]LogAssetEditorManager: Opening Asset editor for AimOffsetBlendSpace /Game/CharacterV2/Animation/AimOffset/Rifle/AO_Character_Aiming.AO_Character_Aiming
-[2019.10.14-19.59.56:122][527]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_7:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
-[2019.10.14-19.59.56:156][527]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_7:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
-[2019.10.14-19.59.56:478][527]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
-[2019.10.14-20.00.00:392][850]LogSlate: Window 'AO_Character_Aiming' being destroyed
-[2019.10.14-20.00.00:402][850]LogSlate: Window 'AO_Character_Aiming' being destroyed
-[2019.10.14-20.00.00:402][850]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.00.00:511][850]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.00.08:739][819]LogAssetEditorManager: Opening Asset editor for AimOffsetBlendSpace /Game/CharacterV2/Animation/AimOffset/Pistol/AO_Character_Pistol.AO_Character_Pistol
-[2019.10.14-20.00.08:749][819]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_10:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
-[2019.10.14-20.00.08:781][819]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_10:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
-[2019.10.14-20.00.09:060][819]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
-[2019.10.14-20.00.10:498][943]LogSlate: Window 'AO_Character_Pistol' being destroyed
-[2019.10.14-20.00.10:501][943]LogSlate: Window 'AO_Character_Pistol' being destroyed
-[2019.10.14-20.00.10:501][943]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.00.10:618][943]LogWorld: UWorld::CleanupWorld for World_11, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.00.18:721][900]LogAssetEditorManager: Opening Asset editor for AimOffsetBlendSpace /Game/CharacterV2/Animation/AimOffset/Rifle/AO_Character.AO_Character
-[2019.10.14-20.00.18:730][900]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_12:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
-[2019.10.14-20.00.18:762][900]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_12:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
-[2019.10.14-20.00.19:028][900]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
-[2019.10.14-20.00.22:679][269]LogSlate: Window 'AO_Character' being destroyed
-[2019.10.14-20.00.22:682][269]LogSlate: Window 'AO_Character' being destroyed
-[2019.10.14-20.00.22:683][269]LogWorld: UWorld::CleanupWorld for World_12, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.00.22:805][269]LogWorld: UWorld::CleanupWorld for World_13, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.00.24:994][525]LogAssetEditorManager: Opening Asset editor for AnimSequence /Game/CharacterV2/Animation/AimOffset/Rifle/Poses/aim_cc.aim_cc
-[2019.10.14-20.00.25:003][525]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_14:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
-[2019.10.14-20.00.25:036][525]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_14:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
-[2019.10.14-20.00.25:339][525]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
-[2019.10.14-20.00.28:690][816]LogSlate: Window 'aim_cc' being destroyed
-[2019.10.14-20.00.28:693][816]LogSlate: Window 'aim_cc' being destroyed
-[2019.10.14-20.00.28:693][816]LogWorld: UWorld::CleanupWorld for World_14, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.00.28:732][816]LogWorld: UWorld::CleanupWorld for World_16, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.00.28:816][816]LogWorld: UWorld::CleanupWorld for World_15, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.00.29:799][930]LogAssetEditorManager: Opening Asset editor for AnimSequence /Game/CharacterV2/Animation/AimOffset/Rifle/Poses/aim_cd.aim_cd
-[2019.10.14-20.00.29:809][930]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_17:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
-[2019.10.14-20.00.29:840][930]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_17:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
-[2019.10.14-20.00.30:152][930]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
-[2019.10.14-20.00.31:850][ 86]LogSlate: Window 'aim_cd' being destroyed
-[2019.10.14-20.00.31:853][ 86]LogSlate: Window 'aim_cd' being destroyed
-[2019.10.14-20.00.31:854][ 86]LogWorld: UWorld::CleanupWorld for World_17, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.00.31:893][ 86]LogWorld: UWorld::CleanupWorld for World_19, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.00.31:979][ 86]LogWorld: UWorld::CleanupWorld for World_18, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.00.41:417][211]LogAssetEditorManager: Opening Asset editor for AimOffsetBlendSpace /Game/CharacterV2/Animation/AimOffset/Rifle/AO_Character.AO_Character
-[2019.10.14-20.00.41:427][211]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_20:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
-[2019.10.14-20.00.41:460][211]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_20:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
-[2019.10.14-20.00.41:718][211]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
-[2019.10.14-20.01.29:821][ 57]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.10.14-20.01.53:148][849]LogSavePackage: Moving '../../../../repos/UnrealTeamProject/TeamProject/Saved/AO_CharacterB367A68447DEF6E821F6FCAC213766A9.tmp' to '../../../../repos/UnrealTeamProject/TeamProject/Content/CharacterV2/Animation/AimOffset/Rifle/AO_Character.uasset'
-[2019.10.14-20.01.54:126][923]LogSlate: Window 'AO_Character' being destroyed
-[2019.10.14-20.01.54:130][923]LogSlate: Window 'AO_Character' being destroyed
-[2019.10.14-20.01.54:130][923]LogWorld: UWorld::CleanupWorld for World_20, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.01.54:250][923]LogWorld: UWorld::CleanupWorld for World_21, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.01.54:713][977]LogTemp: Repeating last play command: New Editor Window (PIE)
-[2019.10.14-20.01.54:730][977]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
-[2019.10.14-20.01.54:730][977]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2019.10.14-20.01.54:730][977]PIE: New page: PIE session: ThirdPersonExampleMap (Oct 14, 2019, 12:01:54 PM)
-[2019.10.14-20.01.54:731][977]LogPlayLevel: Creating play world package: /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap
-[2019.10.14-20.01.54:743][977]LogPlayLevel: PIE: StaticDuplicateObject took: (0.012470s)
-[2019.10.14-20.01.54:744][977]LogAIModule: Creating AISystem for world ThirdPersonExampleMap
-[2019.10.14-20.01.54:744][977]LogPlayLevel: PIE: World Init took: (0.001123s)
-[2019.10.14-20.01.54:744][977]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap to /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap.ThirdPersonExampleMap (0.013749s)
-[2019.10.14-20.01.54:811][977]LogUObjectHash: Compacting FUObjectHashTables data took   1.75ms
-[2019.10.14-20.01.54:834][977]LogInit: XAudio2 using 'Speakers (3- C-Media USB Audio Device   )' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
-[2019.10.14-20.01.54:843][977]LogInit: FAudioDevice initialized.
-[2019.10.14-20.01.54:850][977]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.10.14-20.01.54:850][977]LogLoad: Game class is 'ThirdPersonGameMode_C'
-[2019.10.14-20.01.54:852][977]LogWorld: Bringing World /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap.ThirdPersonExampleMap up for play (max tick rate 0) at 2019.10.14-16.01.54
-[2019.10.14-20.01.54:852][977]LogWorld: Bringing up level for play took: 0.001697
-[2019.10.14-20.01.54:853][977]LogOnline: OSS: Creating online subsystem instance for: :Context_25
-[2019.10.14-20.01.54:858][977]PIE: Play in editor start time for /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap -0.321
-[2019.10.14-20.01.54:858][977]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
-[2019.10.14-20.02.32:411][469]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
-[2019.10.14-20.02.32:411][469]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.10.14-20.02.32:412][469]LogWorld: BeginTearingDown for /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap
-[2019.10.14-20.02.32:430][469]LogSlate: Window 'GameEngineProject Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
-[2019.10.14-20.02.32:435][469]LogWorld: UWorld::CleanupWorld for ThirdPersonExampleMap, bSessionEnded=true, bCleanupResources=true
-[2019.10.14-20.02.32:444][469]LogPlayLevel: Display: Shutting down PIE online subsystems
-[2019.10.14-20.02.32:444][469]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
-[2019.10.14-20.02.32:474][469]LogUObjectHash: Compacting FUObjectHashTables data took   1.68ms
-[2019.10.14-20.02.32:518][472]LogPlayLevel: Display: Destroying online subsystem :Context_25
-[2019.10.14-20.02.34:336][686]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
-[2019.10.14-20.02.40:517][308]LogSlate: Window 'Message Log' being destroyed
-[2019.10.14-20.02.40:521][308]LogSlate: Window 'Message Log' being destroyed
-[2019.10.14-20.02.45:772][934]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2019.10.20-23.02.09:498][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2019.10.20-23.02.09:498][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2019.10.20-23.02.09:499][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
+[2019.10.20-23.02.09:499][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2019.10.20-23.02.09:499][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
+[2019.10.20-23.02.09:499][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
+[2019.10.20-23.02.09:499][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2019.10.20-23.02.09:499][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2019.10.20-23.02.09:499][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:16777216]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2019.10.20-23.02.09:500][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
+[2019.10.20-23.02.09:500][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
+[2019.10.20-23.02.09:508][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.10.20-23.02.09:508][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.10.20-23.02.09:509][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.10.20-23.02.09:510][  0]LogInit: Selected Device Profile: [Windows]
+[2019.10.20-23.02.09:511][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2019.10.20-23.02.09:516][  0]LogHAL: Display: Platform has ~ 8 GB [8505876480 / 8589934592 / 8], which maps to Default [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2019.10.20-23.02.09:516][  0]LogInit: Going up to parent DeviceProfile []
+[2019.10.20-23.02.09:517][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.10.20-23.02.09:517][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Scalability.ini]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.10.20-23.02.09:518][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2019.10.20-23.02.09:519][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2019.10.20-23.02.09:519][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2019.10.20-23.02.09:519][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Config/Windows/Engine.ini]
+[2019.10.20-23.02.09:520][  0]LogInit: Computer: DESKTOP-AR41PVV
+[2019.10.20-23.02.09:520][  0]LogInit: User: CutieCutie
+[2019.10.20-23.02.09:520][  0]LogInit: CPU Page size=4096, Cores=4
+[2019.10.20-23.02.09:520][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2019.10.20-23.02.09:520][  0]LogMemory: Memory total: Physical=7.9GB (8GB approx)
+[2019.10.20-23.02.09:521][  0]LogMemory: Platform Memory Stats for Windows
+[2019.10.20-23.02.09:521][  0]LogMemory: Process Physical Memory: 102.80 MB used, 102.80 MB peak
+[2019.10.20-23.02.09:521][  0]LogMemory: Process Virtual Memory: 101.19 MB used, 101.19 MB peak
+[2019.10.20-23.02.09:521][  0]LogMemory: Physical Memory: 6580.95 MB used,  1530.88 MB free, 8111.84 MB total
+[2019.10.20-23.02.09:521][  0]LogMemory: Virtual Memory: 4678.40 MB used,  134213048.00 MB free, 134217728.00 MB total
+[2019.10.20-23.02.09:526][  0]LogWindows: WindowsPlatformFeatures enabled
+[2019.10.20-23.02.09:668][  0]LogInit: Using OS detected language (en-US).
+[2019.10.20-23.02.09:668][  0]LogInit: Using OS detected locale (en-CA).
+[2019.10.20-23.02.09:672][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2019.10.20-23.02.10:010][  0]LogInit: Setting process to per monitor DPI aware
+[2019.10.20-23.02.10:082][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2019.10.20-23.02.10:082][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2019.10.20-23.02.10:529][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.10.20-23.02.10:529][  0]LogD3D11RHI: D3D11 adapters:
+[2019.10.20-23.02.10:696][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1050' (Feature Level 11_0)
+[2019.10.20-23.02.10:696][  0]LogD3D11RHI:       1979/0/4055 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
+[2019.10.20-23.02.10:725][  0]LogD3D11RHI:    1. 'Intel(R) HD Graphics 630' (Feature Level 11_0)
+[2019.10.20-23.02.10:725][  0]LogD3D11RHI:       128/0/4055 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
+[2019.10.20-23.02.10:730][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2019.10.20-23.02.10:730][  0]LogD3D11RHI:       0/0/4055 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2019.10.20-23.02.10:730][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2019.10.20-23.02.10:780][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2019.10.20-23.02.10:780][  0]LogD3D11RHI:     GPU DeviceId: 0x1c8d (for the marketing name, search the web for "GPU Device Id")
+[2019.10.20-23.02.10:780][  0]LogWindows: EnumDisplayDevices:
+[2019.10.20-23.02.10:781][  0]LogWindows:    0. 'Intel(R) HD Graphics 630' (P:1 D:1)
+[2019.10.20-23.02.10:781][  0]LogWindows:    1. 'Intel(R) HD Graphics 630' (P:0 D:0)
+[2019.10.20-23.02.10:781][  0]LogWindows:    2. 'Intel(R) HD Graphics 630' (P:0 D:0)
+[2019.10.20-23.02.10:782][  0]LogWindows: DebugString: PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter FoundDriverCount:0 
+[2019.10.20-23.02.10:782][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1050
+[2019.10.20-23.02.10:782][  0]LogD3D11RHI:   Driver Version: Unknown (internal:Unknown, unified:Unknown)
+[2019.10.20-23.02.10:782][  0]LogD3D11RHI:      Driver Date: Unknown
+[2019.10.20-23.02.10:782][  0]LogRHI: Texture pool is 1385 MB (70% of 1979 MB)
+[2019.10.20-23.02.10:840][  0]LogD3D11RHI: Async texture creation enabled
+[2019.10.20-23.02.10:877][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
+[2019.10.20-23.02.11:389][  0]LogTemp: Display: Module 'AllDesktopTargetPlatform' loaded TargetPlatform 'AllDesktop'
+[2019.10.20-23.02.11:401][  0]LogTemp: Display: Module 'MacClientTargetPlatform' loaded TargetPlatform 'MacClient'
+[2019.10.20-23.02.11:411][  0]LogTemp: Display: Module 'MacNoEditorTargetPlatform' loaded TargetPlatform 'MacNoEditor'
+[2019.10.20-23.02.11:420][  0]LogTemp: Display: Module 'MacServerTargetPlatform' loaded TargetPlatform 'MacServer'
+[2019.10.20-23.02.11:432][  0]LogTemp: Display: Module 'MacTargetPlatform' loaded TargetPlatform 'Mac'
+[2019.10.20-23.02.11:443][  0]LogTemp: Display: Module 'WindowsClientTargetPlatform' loaded TargetPlatform 'WindowsClient'
+[2019.10.20-23.02.11:456][  0]LogTemp: Display: Module 'WindowsNoEditorTargetPlatform' loaded TargetPlatform 'WindowsNoEditor'
+[2019.10.20-23.02.11:466][  0]LogTemp: Display: Module 'WindowsServerTargetPlatform' loaded TargetPlatform 'WindowsServer'
+[2019.10.20-23.02.11:472][  0]LogTemp: Display: Module 'WindowsTargetPlatform' loaded TargetPlatform 'Windows'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTC'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATC'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXT'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1a'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTC'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'AndroidClient'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTCClient'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATCClient'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXTClient'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1Client'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1aClient'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2Client'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTCClient'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_Multi'
+[2019.10.20-23.02.11:515][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_MultiClient'
+[2019.10.20-23.02.11:519][  0]LogTemp: Display: Module 'HTML5TargetPlatform' loaded TargetPlatform 'HTML5'
+[2019.10.20-23.02.11:547][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOSClient'
+[2019.10.20-23.02.11:547][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOS'
+[2019.10.20-23.02.11:563][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOSClient'
+[2019.10.20-23.02.11:563][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOS'
+[2019.10.20-23.02.11:572][  0]LogTemp: Display: Module 'LinuxClientTargetPlatform' loaded TargetPlatform 'LinuxClient'
+[2019.10.20-23.02.11:582][  0]LogTemp: Display: Module 'LinuxNoEditorTargetPlatform' loaded TargetPlatform 'LinuxNoEditor'
+[2019.10.20-23.02.11:595][  0]LogTemp: Display: Module 'LinuxServerTargetPlatform' loaded TargetPlatform 'LinuxServer'
+[2019.10.20-23.02.11:607][  0]LogTemp: Display: Module 'LinuxTargetPlatform' loaded TargetPlatform 'Linux'
+[2019.10.20-23.02.11:640][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'Lumin'
+[2019.10.20-23.02.11:640][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'LuminClient'
+[2019.10.20-23.02.11:640][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2019.10.20-23.02.11:656][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2019.10.20-23.02.11:768][  0]LogShaderCompilers: Guid format shader working directory is -28 characters bigger than the processId version (C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Intermediate/Shaders/WorkingDirectory/2772/).
+[2019.10.20-23.02.11:768][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Cutie Cutie/AppData/Local/Temp/UnrealShaderWorkingDir/5596AA624E9140E5D726838558902FFF/'.
+[2019.10.20-23.02.11:772][  0]LogXGEController: Cleaning working directory: C:/Users/Cutie Cutie/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2019.10.20-23.02.11:772][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2019.10.20-23.02.11:773][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2019.10.20-23.02.11:773][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2019.10.20-23.02.12:735][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2019.10.20-23.02.12:943][  0]LogDerivedDataCache: Loaded boot cache 0.21s 73MB C:/Users/Cutie Cutie/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc.
+[2019.10.20-23.02.12:943][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/Cutie Cutie/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc
+[2019.10.20-23.02.12:943][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2019.10.20-23.02.12:943][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2019.10.20-23.02.12:943][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.10.20-23.02.12:943][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2019.10.20-23.02.12:958][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2019.10.20-23.02.12:958][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.10.20-23.02.12:958][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2019.10.20-23.02.12:960][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Cutie Cutie/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2019.10.20-23.02.12:960][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2019.10.20-23.02.12:960][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2019.10.20-23.02.12:988][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2019.10.20-23.02.12:999][  0]LogSlate: Using FreeType 2.6.0
+[2019.10.20-23.02.13:004][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2019.10.20-23.02.13:178][  0]LogAssetRegistry: FAssetRegistry took 0.0062 seconds to start up
+[2019.10.20-23.02.13:868][  0]LogInit: Selected Device Profile: [Windows]
+[2019.10.20-23.02.14:213][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2019.10.20-23.02.14:213][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2019.10.20-23.02.14:213][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2019.10.20-23.02.14:213][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2019.10.20-23.02.14:214][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2019.10.20-23.02.14:285][  0]LogNetVersion: GameEngineProject 1.0.0, NetCL: 8386587, EngineNetVer: 11, GameNetVer: 0 (Checksum: 849915707)
+[2019.10.20-23.02.15:201][  0]LogPackageLocalizationCache: Processed 12 localized package path(s) for 1 prioritized culture(s) in 0.081412 seconds
+[2019.10.20-23.02.15:209][  0]LogUObjectArray: 43444 objects as part of root set at end of initial load.
+[2019.10.20-23.02.15:209][  0]LogUObjectAllocator: 7548648 out of 0 bytes used by permanent object pool.
+[2019.10.20-23.02.15:209][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2019.10.20-23.02.17:585][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2019.10.20-23.02.17:596][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2019.10.20-23.02.17:726][  0]SourceControl: Source control is disabled
+[2019.10.20-23.02.17:727][  0]SourceControl: Source control is disabled
+[2019.10.20-23.02.17:740][  0]SourceControl: Source control is disabled
+[2019.10.20-23.02.17:745][  0]SourceControl: Source control is disabled
+[2019.10.20-23.02.18:020][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2019.10.20-23.02.18:272][  0]LogOcInput: OculusInput pre-init called
+[2019.10.20-23.02.18:286][  0]LogWindows: Failed to load 'OVRPlugin.dll' (GetLastError=126)
+[2019.10.20-23.02.18:286][  0]LogWindows: File 'OVRPlugin.dll' does not exist
+[2019.10.20-23.02.18:486][  0]LogEngine: Initializing Engine...
+[2019.10.20-23.02.18:490][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.10.20-23.02.18:497][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.002 s
+[2019.10.20-23.02.18:801][  0]LogInit: Initializing FReadOnlyCVARCache
+[2019.10.20-23.02.18:871][  0]LogAIModule: Creating AISystem for world Untitled
+[2019.10.20-23.02.18:925][  0]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.10.20-23.02.19:241][  0]LogInit: FAudioDevice initialized.
+[2019.10.20-23.02.19:242][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2019.10.20-23.02.19:366][  0]LogDerivedDataCache: Saved boot cache 0.12s 73MB C:/Users/Cutie Cutie/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc.
+[2019.10.20-23.02.19:376][  0]LogInit: Texture streaming: Enabled
+[2019.10.20-23.02.19:425][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2019.10.20-23.02.19:549][  0]LogInit: Transaction tracking system initialized
+[2019.10.20-23.02.19:634][  0]BlueprintLog: New page: Editor Load
+[2019.10.20-23.02.19:825][  0]LocalizationService: Localization service is disabled
+[2019.10.20-23.02.21:192][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2019.10.20-23.02.21:192][  0]LogCook: Display: Mobile HDR setting 1
+[2019.10.20-23.02.21:705][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Content/' took 0.02s
+[2019.10.20-23.02.21:705][  0]SourceControl: Source control is disabled
+[2019.10.20-23.02.21:707][  0]Cmd: MAP LOAD FILE="C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Content/ThirdPersonBP/Maps/ThirdPersonExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2019.10.20-23.02.21:710][  0]LightingResults: New page: Lighting Build
+[2019.10.20-23.02.21:729][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2019.10.20-23.02.21:735][  0]MapCheck: New page: Map Check
+[2019.10.20-23.02.21:735][  0]LightingResults: New page: Lighting Build
+[2019.10.20-23.02.21:786][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.88ms
+[2019.10.20-23.02.22:967][  0]LogAIModule: Creating AISystem for world ThirdPersonExampleMap
+[2019.10.20-23.02.23:033][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2019.10.20-23.02.23:085][  0]LogUObjectHash: Compacting FUObjectHashTables data took   2.11ms
+[2019.10.20-23.02.23:085][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2019.10.20-23.02.23:086][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.538ms to complete.
+[2019.10.20-23.02.23:086][  0]LogFileHelpers: Loading map 'ThirdPersonExampleMap' took 1.381
+[2019.10.20-23.02.23:348][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.10.20-23.02.23:357][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.10.20-23.02.23:364][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.10.20-23.02.23:371][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.10.20-23.02.23:401][  0]LogCollectionManager: Loaded 0 collections in 0.001492 seconds
+[2019.10.20-23.02.23:438][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Saved/Collections/' took 0.00s
+[2019.10.20-23.02.23:438][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Content/Developers/CutieCutie/Collections/' took 0.00s
+[2019.10.20-23.02.23:438][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Cutie Cutie/Documents/Unreal team project/UnrealTeamProject/TeamProject/Content/Collections/' took 0.00s
+[2019.10.20-23.02.23:438][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000003 seconds
+[2019.10.20-23.02.23:450][  0]LogContentBrowser: Native class hierarchy populated in 0.0087 seconds. Added 2863 classes and 680 folders.
+[2019.10.20-23.02.23:467][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0002 seconds. Added 0 classes and 0 folders.
+[2019.10.20-23.02.23:675][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0002 seconds. Added 0 classes and 0 folders.
+[2019.10.20-23.02.23:690][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0003 seconds. Added 1 classes and 2 folders.
+[2019.10.20-23.02.23:789][  0]LogSlate: Took 0.000896 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2019.10.20-23.02.23:795][  0]LogSlate: Took 0.001523 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2019.10.20-23.02.23:806][  0]LogSlate: Took 0.001224 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2019.10.20-23.02.23:955][  0]LogRenderer: Reallocating scene render targets to support 860x388 Format 10 NumSamples 1 (Frame:1).
+[2019.10.20-23.02.24:233][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2019.10.20-23.02.24:233][  0]LogLoad: (Engine Initialization) Total time: 18.05 seconds
+[2019.10.20-23.02.24:233][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2019.10.20-23.02.24:322][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2019.10.20-23.02.24:354][  0]LogSlate: Took 0.001128 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.10.20-23.02.24:588][  3]LogAssetRegistry: Asset discovery search completed in 11.4129 seconds
+[2019.10.20-23.02.24:593][  3]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000006 seconds (found 0 objects)
+[2019.10.20-23.02.24:593][  3]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000073 seconds (updated 0 objects)
+[2019.10.20-23.02.25:910][  7]LogSlate: Took 0.000346 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.10.20-23.03.04:734][251]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.10.20-23.03.06:218][340]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.10.20-23.03.08:172][451]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2019.10.20-23.03.08:201][451]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
+[2019.10.20-23.03.08:202][451]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.10.20-23.03.08:208][451]PIE: New page: PIE session: ThirdPersonExampleMap (Oct 20, 2019, 3:03:08 PM)
+[2019.10.20-23.03.08:214][451]LogOnline: OSS: Creating online subsystem instance for: NULL
+[2019.10.20-23.03.08:217][451]LogPlayLevel: Creating play world package: /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap
+[2019.10.20-23.03.08:246][451]LogPlayLevel: PIE: StaticDuplicateObject took: (0.028129s)
+[2019.10.20-23.03.08:248][451]LogAIModule: Creating AISystem for world ThirdPersonExampleMap
+[2019.10.20-23.03.08:249][451]LogPlayLevel: PIE: World Init took: (0.002761s)
+[2019.10.20-23.03.08:249][451]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap to /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap.ThirdPersonExampleMap (0.031741s)
+[2019.10.20-23.03.08:282][451]LogUObjectHash: Compacting FUObjectHashTables data took   2.92ms
+[2019.10.20-23.03.08:307][451]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.10.20-23.03.08:441][451]LogInit: FAudioDevice initialized.
+[2019.10.20-23.03.08:457][451]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.10.20-23.03.08:469][451]LogLoad: Game class is 'ThirdPersonGameMode_C'
+[2019.10.20-23.03.08:484][451]LogWorld: Bringing World /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap.ThirdPersonExampleMap up for play (max tick rate 60) at 2019.10.20-19.03.08
+[2019.10.20-23.03.08:511][451]LogWorld: Bringing up level for play took: 0.030906
+[2019.10.20-23.03.08:512][451]LogOnline: OSS: Creating online subsystem instance for: :Context_2
+[2019.10.20-23.03.08:541][451]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0005 seconds. Added 20 classes and 0 folders.
+[2019.10.20-23.03.08:577][451]PIE: Play in editor start time for /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap -0.317
+[2019.10.20-23.03.08:578][451]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
+[2019.10.20-23.03.08:667][452]LogRenderer: Reallocating scene render targets to support 1280x716 Format 10 NumSamples 1 (Frame:1).
+[2019.10.20-23.03.10:604][536]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
+[2019.10.20-23.03.10:608][536]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.10.20-23.03.10:608][536]LogWorld: BeginTearingDown for /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap
+[2019.10.20-23.03.10:645][536]LogSlate: Window 'GameEngineProject Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
+[2019.10.20-23.03.10:653][536]LogWorld: UWorld::CleanupWorld for ThirdPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2019.10.20-23.03.10:671][536]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.10.20-23.03.10:673][536]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
+[2019.10.20-23.03.10:735][536]LogUObjectHash: Compacting FUObjectHashTables data took   3.09ms
+[2019.10.20-23.03.10:765][537]LogPlayLevel: Display: Destroying online subsystem :Context_2
+[2019.10.20-23.04.56:711][185]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2019.10.20-23.04.56:731][185]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
+[2019.10.20-23.04.56:732][185]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.10.20-23.04.56:732][185]PIE: New page: PIE session: ThirdPersonExampleMap (Oct 20, 2019, 3:04:56 PM)
+[2019.10.20-23.04.56:732][185]LogPlayLevel: Creating play world package: /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap
+[2019.10.20-23.04.56:755][185]LogPlayLevel: PIE: StaticDuplicateObject took: (0.021981s)
+[2019.10.20-23.04.56:756][185]LogAIModule: Creating AISystem for world ThirdPersonExampleMap
+[2019.10.20-23.04.56:757][185]LogPlayLevel: PIE: World Init took: (0.002154s)
+[2019.10.20-23.04.56:757][185]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap to /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap.ThirdPersonExampleMap (0.024781s)
+[2019.10.20-23.04.56:789][185]LogUObjectHash: Compacting FUObjectHashTables data took   1.61ms
+[2019.10.20-23.04.56:805][185]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.10.20-23.04.56:914][185]LogInit: FAudioDevice initialized.
+[2019.10.20-23.04.56:923][185]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.10.20-23.04.56:924][185]LogLoad: Game class is 'ThirdPersonGameMode_C'
+[2019.10.20-23.04.56:933][185]LogWorld: Bringing World /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap.ThirdPersonExampleMap up for play (max tick rate 0) at 2019.10.20-19.04.56
+[2019.10.20-23.04.56:935][185]LogWorld: Bringing up level for play took: 0.009351
+[2019.10.20-23.04.56:935][185]LogOnline: OSS: Creating online subsystem instance for: :Context_3
+[2019.10.20-23.04.56:946][185]PIE: Play in editor start time for /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap 0.051
+[2019.10.20-23.04.56:947][185]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
+[2019.10.20-23.05.06:697][901]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
+[2019.10.20-23.05.06:698][901]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.10.20-23.05.06:698][901]LogWorld: BeginTearingDown for /Game/ThirdPersonBP/Maps/UEDPIE_0_ThirdPersonExampleMap
+[2019.10.20-23.05.06:719][901]LogSlate: Window 'GameEngineProject Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
+[2019.10.20-23.05.06:723][901]LogWorld: UWorld::CleanupWorld for ThirdPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2019.10.20-23.05.06:734][901]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.10.20-23.05.06:735][901]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap' with GeneratedClass '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap_C' with ClassGeneratedBy '/Game/ThirdPersonBP/Maps/ThirdPersonExampleMap.ThirdPersonExampleMap:PersistentLevel.ThirdPersonExampleMap'
+[2019.10.20-23.05.06:781][901]LogUObjectHash: Compacting FUObjectHashTables data took   1.67ms
+[2019.10.20-23.05.06:804][902]LogPlayLevel: Display: Destroying online subsystem :Context_3
+[2019.10.20-23.05.07:237][950]Cmd: SELECT NONE
