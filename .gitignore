@@ -87,6 +87,8 @@ TeamProject/Intermediate/AssetRegistryCache/
 *.ini
 
 *.png
+
+*.json
 
 TeamProject/Saved/Config/CrashReportClient/UE4CC-Windows-DEFC118C440D598829470FAEC2639AD5/CrashReportClient.ini
 
