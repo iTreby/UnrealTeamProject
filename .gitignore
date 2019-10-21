@@ -81,3 +81,9 @@ TeamProject/Saved/Logs/
 TeamProject/Intermediate/AssetRegistryCache/
 
 *.bin
+
+*.log
+
+*.ini
+
+*.png
