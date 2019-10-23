@@ -75,45 +75,36 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
-
-TeamProject/Saved/Logs/
-
-TeamProject/Intermediate/AssetRegistryCache/
-
-*.bin
-
-*.log
-
-*.ini
-
-*.png
-
-*.json
 
-TeamProject/Saved/Config/CrashReportClient/UE4CC-Windows-DEFC118C440D598829470FAEC2639AD5/CrashReportClient.ini
 
-TeamProject/Intermediate/CachedAssetRegistry.bin
+TeamProject/Saved/Logs/
 
-TeamProject/Saved/AutoScreenshot.png
 
-TeamProject/Saved/Config/CrashReportClient/UE4CC-Windows-C2C3C3B14B69501F8448939B3EA53E1F/CrashReportClient.ini
 
-TeamProject/Saved/Config/CrashReportClient/UE4CC-Windows-D0F1F5BE406D818931A749AEAA0B0612/CrashReportClient.ini
+TeamProject/Intermediate/AssetRegistryCache/
 
-TeamProject/Saved/Config/CrashReportClient/UE4CC-Windows-EC119CEB472F09D2A6607F9BBE82A031/CrashReportClient.ini
 
-TeamProject/Saved/Config/CrashReportClient/UE4CC-Windows-EE8453FF4D0D25B3690653808516EBBF/CrashReportClient.ini
 
-TeamProject/Saved/Config/CrashReportClient/UE4CC-Windows-F05F2BAF47AA890CB8D4D6BDEDD0E029/CrashReportClient.ini
+*.bin
 
-TeamProject/Saved/Config/CrashReportClient/UE4CC-Windows-F0B7FDCD46817BAFA616E5BDD56B57F3/CrashReportClient.ini
 
-TeamProject/Saved/Config/CrashReportClient/UE4CC-Windows-F6DFD7414AAE25BEA52D169C29059337/CrashReportClient.ini
 
-TeamProject/Saved/Config/Windows/EditorPerProjectUserSettings.ini
+*.log
 
-TeamProject/Saved/Logs/GameEngineProject.log
 
-TeamProject/Intermediate/
 
-TeamProject/Saved/Autosaves/
+*.ini
+
+
+
+*.png
+
+
+
+*.json
+
+
+TeamProject/Saved/*
+
+TeamProject/Intermediate/*
+
