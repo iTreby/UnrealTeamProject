@@ -94,6 +94,10 @@ void AFP_FirstPersonCharacter::SetupPlayerInputComponent(class UInputComponent* 
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AFP_FirstPersonCharacter::LookUpAtRate);
 }
 
+//void AFP_FirstPersonCharacter::SetHeadShotCombo() {
+//    GetWorldTimerManager().SetTimer(headShotTimerHandle, this, &AProximityMine::Explode, delay, true, delay);
+//}
+
 void AFP_FirstPersonCharacter::OnFire()
 {
 	// Play a sound if there is one
