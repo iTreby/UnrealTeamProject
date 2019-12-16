@@ -34,7 +34,10 @@ public:
     bool isHeadShot = false;
 
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-    float damageWhenHit = 0.1;
+    float damageBody = 0.1;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+    float damageHead = 0.3;
 
 protected:
 	// Called when the game starts or when spawned
@@ -54,4 +57,6 @@ public:
             FVector NormalImpulse,
             const FHitResult &Hit
     ) override;
+
+    class AFP_FirstPersonCharacter* GetPlayer();
 };
