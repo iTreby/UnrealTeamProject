@@ -13,6 +13,7 @@ class USkeletalMeshComponent;
 class USoundBase;
 class UAnimMontage;
 
+
 UCLASS(config=Game)
 class AFP_FirstPersonCharacter : public ACharacter
 {
@@ -73,9 +74,20 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	float WeaponDamage;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	int headShotCount;
+
+	UPROPERTY(EditAnywhere)
+    float headShotTimer = 10.0f;
+
+private:
+    UPROPERTY()
+    FTimerHandle headShotTimerHandle;
+
 protected:
 
 	virtual void BeginPlay();
+  
 	/** Handler for a touch input beginning. */
 	void TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location);
 

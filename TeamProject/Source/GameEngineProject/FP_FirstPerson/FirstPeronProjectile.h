@@ -21,6 +21,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+private:
+    bool isHit = false;
+
 public:	
 	// Called every frame
 	AFirstPeronProjectile();

@@ -1,9 +1,14 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
+#include <Runtime/Engine/Classes/Kismet/GameplayStatics.h>
 #include "FirstPeronProjectile.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/SphereComponent.h"
+#include "Enemy.h"
+#include "Engine.h"
+#include "ComboGameState.h"
+
 
 // Sets default values
 AFirstPeronProjectile::AFirstPeronProjectile()
@@ -47,8 +52,30 @@ void AFirstPeronProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAct
 	if ((OtherActor != NULL) && (OtherActor != this) && (OtherComp != NULL) && OtherComp->IsSimulatingPhysics())
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
-
-		Destroy();
+        isHit = true;
+        Destroy();
 	}
+
+    auto* enemy = Cast<AEnemy>(OtherActor);
+    auto* comboGameState = Cast<AComboGameState>(UGameplayStatics::GetGameState(this));
+    if (enemy) {
+        isHit = true;
+        float bodyPartMultiplier;
+        if (enemy->isHeadShot) {
+            enemy->HP -= enemy->damageHead;
+            bodyPartMultiplier = enemy->damageHead * 10;
+        } else {
+            enemy->HP -= enemy->damageBody;
+            bodyPartMultiplier = enemy->damageBody * 10;
+        }
+        comboGameState->IncreaseComboValue(bodyPartMultiplier);
+    }
+
+    // If hits something esle, counts as a miss
+    if (OtherActor != NULL && !enemy && !isHit) {
+        isHit = true;
+        comboGameState->DecreaseComboValue();
+    }
+
 }
 
