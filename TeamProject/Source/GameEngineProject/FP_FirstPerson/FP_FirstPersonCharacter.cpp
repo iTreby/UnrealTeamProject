@@ -62,15 +62,6 @@ AFP_FirstPersonCharacter::AFP_FirstPersonCharacter()
 	// derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }
 
-void AFP_FirstPersonCharacter::BeginPlay()
-{
-	auto widget = CreateWidget<UPlayerHPWidget>(UGameplayStatics::GetPlayerController(this, 0), WidgetClass);
-	widget->Player = this;
-	widget->AddToViewport();
-}
-
-
-
 //////////////////////////////////////////////////////////////////////////
 // Input
 
