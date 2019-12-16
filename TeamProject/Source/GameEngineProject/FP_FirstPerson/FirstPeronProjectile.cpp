@@ -52,12 +52,14 @@ void AFirstPeronProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAct
 	if ((OtherActor != NULL) && (OtherActor != this) && (OtherComp != NULL) && OtherComp->IsSimulatingPhysics())
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
-		Destroy();
+        isHit = true;
+        Destroy();
 	}
 
     auto* enemy = Cast<AEnemy>(OtherActor);
     auto* comboGameState = Cast<AComboGameState>(UGameplayStatics::GetGameState(this));
     if (enemy) {
+        isHit = true;
         float bodyPartMultiplier;
         if (enemy->isHeadShot) {
             enemy->HP -= enemy->damageHead;
@@ -69,6 +71,7 @@ void AFirstPeronProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAct
         comboGameState->IncreaseComboValue(bodyPartMultiplier);
     }
 
+    // If hits something esle, counts as a miss
     if (OtherActor != NULL && !enemy && !isHit) {
         isHit = true;
         comboGameState->DecreaseComboValue();

@@ -24,13 +24,6 @@ void AComboGameState::IncreaseLevel() {
     }
 }
 
-void AComboGameState::Tick(float DeltaTime)
-{
-    Super::Tick(DeltaTime);
-    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Tick::CurrentPoint %f"), CurrentPoint));
-    DecreaseComboValue(DeltaTime);
-}
-
 // Decrease points over time
 void AComboGameState::DecreaseComboValue(float DeltaTime) {
     CurrentPoint -= FMath::Clamp(CurrentPoint - DeltaTime * ComboBarDecreasingSpeed, 100.0f, 0.0f);
