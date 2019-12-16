@@ -35,6 +35,15 @@ class AFP_FirstPersonCharacter : public ACharacter
 public:
 	AFP_FirstPersonCharacter();
 
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<class UPlayerHPWidget> WidgetClass;
+
+	UPROPERTY(BlueprintReadOnly)
+		float Shield = 1.0f;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+		float HP = 1.0f;
+
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 	TSubclassOf<class AFirstPeronProjectile> ProjectileClass;
 
@@ -68,6 +77,7 @@ public:
 
 protected:
 
+	virtual void BeginPlay();
 	/** Handler for a touch input beginning. */
 	void TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location);
 
