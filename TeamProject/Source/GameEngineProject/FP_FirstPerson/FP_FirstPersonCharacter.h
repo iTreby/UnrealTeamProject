@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "FpHPWidget.h"
 #include "GameFramework/Character.h"
 #include "FP_FirstPersonCharacter.generated.h"
 
@@ -35,6 +36,12 @@ class AFP_FirstPersonCharacter : public ACharacter
 
 public:
 	AFP_FirstPersonCharacter();
+
+	UPROPERTY(BlueprintReadOnly)
+		float hp = 1.0f;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UFpHPWidget> Widget;
 
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 	TSubclassOf<class AFirstPeronProjectile> ProjectileClass;
@@ -79,8 +86,8 @@ private:
 
 protected:
 
-    void SetHeadShotCombo();
-
+	virtual void BeginPlay();
+  
 	/** Handler for a touch input beginning. */
 	void TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location);
 

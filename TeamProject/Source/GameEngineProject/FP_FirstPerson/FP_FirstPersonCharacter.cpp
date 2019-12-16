@@ -6,6 +6,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "Camera/CameraComponent.h"
+#include "PlayerHPWidget.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/PlayerController.h"
 #include "DrawDebugHelpers.h"
@@ -61,8 +62,31 @@ AFP_FirstPersonCharacter::AFP_FirstPersonCharacter()
 	// derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }
 
+void AFP_FirstPersonCharacter::BeginPlay()
+{
+	auto widget = CreateWidget<UPlayerHPWidget>(UGameplayStatics::GetPlayerController(this, 0), WidgetClass);
+	widget->Player = this;
+	widget->AddToViewport();
+}
+
+
+
 //////////////////////////////////////////////////////////////////////////
 // Input
+
+void AFP_FirstPersonCharacter::BeginPlay()
+{
+	// Call the base class  
+	Super::BeginPlay();
+
+	auto widget = CreateWidget<UFpHPWidget>(UGameplayStatics::GetPlayerController(this, 0), Widget);
+	widget->Player = this;
+	widget->AddToViewport();
+
+	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
+	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
+
+}
 
 void AFP_FirstPersonCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
