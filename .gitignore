@@ -108,3 +108,7 @@ TeamProject/Saved/*
 
 TeamProject/Intermediate/*
 
+**/.idea/
+
+TeamProject/cmake-build-debug/
+
