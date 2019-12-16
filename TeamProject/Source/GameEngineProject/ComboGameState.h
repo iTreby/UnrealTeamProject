@@ -60,8 +60,6 @@ private:
 
 public:
 
-    virtual void Tick(float DeltaTime) override;
-
     void IncreaseComboValue(float bodyPartMultiplier);
 
     void DecreaseComboValue(float DeltaTime);
