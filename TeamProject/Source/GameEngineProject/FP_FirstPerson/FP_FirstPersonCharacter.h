@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "FpHPWidget.h"
 #include "GameFramework/Character.h"
 #include "FP_FirstPersonCharacter.generated.h"
 
@@ -35,14 +36,11 @@ class AFP_FirstPersonCharacter : public ACharacter
 public:
 	AFP_FirstPersonCharacter();
 
-	UPROPERTY(EditAnywhere)
-		TSubclassOf<class UPlayerHPWidget> WidgetClass;
-
 	UPROPERTY(BlueprintReadOnly)
-		float Shield = 1.0f;
+		float hp = 1.0f;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-		float HP = 1.0f;
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UFpHPWidget> Widget;
 
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 	TSubclassOf<class AFirstPeronProjectile> ProjectileClass;
