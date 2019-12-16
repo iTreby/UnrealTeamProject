@@ -6,6 +6,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "Camera/CameraComponent.h"
+#include "PlayerHPWidget.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/PlayerController.h"
 #include "DrawDebugHelpers.h"
@@ -60,6 +61,15 @@ AFP_FirstPersonCharacter::AFP_FirstPersonCharacter()
 	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P are set in the
 	// derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }
+
+void AFP_FirstPersonCharacter::BeginPlay()
+{
+	auto widget = CreateWidget<UPlayerHPWidget>(UGameplayStatics::GetPlayerController(this, 0), WidgetClass);
+	widget->Player = this;
+	widget->AddToViewport();
+}
+
+
 
 //////////////////////////////////////////////////////////////////////////
 // Input
