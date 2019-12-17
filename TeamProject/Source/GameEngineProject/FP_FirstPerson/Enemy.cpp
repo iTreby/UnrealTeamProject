@@ -76,8 +76,9 @@ void AEnemy::NotifyHit (
         }
         Destroy();
 	}
-	else if (HP != 0)
-	{
+	//freeze enemy
+	else if (HP != 0 && isFreeze == true)
+	{   
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Freeze")));
 		
 		CustomTimeDilation = 0;
