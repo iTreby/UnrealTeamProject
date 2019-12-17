@@ -6,7 +6,7 @@
 #include "Engine.h"
 #include "FirstPeronProjectile.h"
 #include "FP_FirstPersonCharacter.h"
-
+#include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values
 AEnemy::AEnemy()
@@ -14,8 +14,8 @@ AEnemy::AEnemy()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-	RootComponent = Root;
+	//Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+	//RootComponent = Root;
 
     BodyMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BodyMesh"));
     BodyMesh->SetupAttachment(RootComponent);
@@ -35,6 +35,7 @@ AEnemy::AEnemy()
 void AEnemy::BeginPlay()
 {
 	Super::BeginPlay();
+
 }
 
 // Called every frame
@@ -51,7 +52,8 @@ AFP_FirstPersonCharacter* AEnemy::GetPlayer () {
     auto* player = Cast<AFP_FirstPersonCharacter>(OutActors[0]);
     if (!player) return nullptr;
     return player;
-};
+}
+
 
 void AEnemy::NotifyHit (
         class UPrimitiveComponent *MyComp,
@@ -66,12 +68,34 @@ void AEnemy::NotifyHit (
     auto projectile = Cast<AFirstPeronProjectile>(Other);
     if (!projectile) { return ;}
     GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Black, FString::Printf(TEXT("Enemy::HP: %f"), HP));
+	
     if (HP <= 0) {
         auto* player = GetPlayer();
         if (player && isHeadShot) {
             player->headShotCount += 1;
         }
         Destroy();
-    }
+	}
+	else if (HP != 0)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Freeze")));
+		
+		CustomTimeDilation = 0;
+		GetController()->CustomTimeDilation = 0;
+		if (!TimerHandle.IsValid())
+		{
+			GetWorldTimerManager().SetTimer(TimerHandle, this, &AEnemy::UnFreeze, 5.f, false);
+		}
+		else {
+			GetWorldTimerManager().ClearTimer(TimerHandle);
+			GetWorldTimerManager().SetTimer(TimerHandle, this, &AEnemy::UnFreeze, 5.f, false);
+		}
+	}
+}
+
+void AEnemy::UnFreeze()
+{
+	CustomTimeDilation = 1;
+	GetController()->CustomTimeDilation = 1;
 }
 
