@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "GameFramework/Character.h"
 #include "Enemy.generated.h"
 
 UCLASS()
-class GAMEENGINEPROJECT_API AEnemy : public AActor
+class GAMEENGINEPROJECT_API AEnemy : public ACharacter
 {
 	GENERATED_BODY()
 	
@@ -15,8 +15,8 @@ public:
 	// Sets default values for this actor's properties
 	AEnemy();
 
-	UPROPERTY(VisibleAnywhere)
-    class USceneComponent* Root;
+	//UPROPERTY(VisibleAnywhere)
+    //class USceneComponent* Root;
 
     UPROPERTY(VisibleAnywhere)
     class UStaticMeshComponent* BodyMesh;
@@ -59,4 +59,9 @@ public:
     ) override;
 
     class AFP_FirstPersonCharacter* GetPlayer();
+
+	FTimerHandle TimerHandle;
+
+	void UnFreeze();
+
 };
