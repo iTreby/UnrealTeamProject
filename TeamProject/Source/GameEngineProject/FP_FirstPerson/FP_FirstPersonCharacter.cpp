@@ -20,6 +20,12 @@ DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
 AFP_FirstPersonCharacter::AFP_FirstPersonCharacter()
 {
+	//Adding Mesh for support robot
+	SupportMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SupportMesh"));
+	SupportMesh->SetupAttachment(RootComponent);
+
+
+
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
