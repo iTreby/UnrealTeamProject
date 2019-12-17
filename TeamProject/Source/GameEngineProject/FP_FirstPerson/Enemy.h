@@ -64,4 +64,6 @@ public:
 
 	void UnFreeze();
 
+	bool isFreeze = false;
+	
 };
