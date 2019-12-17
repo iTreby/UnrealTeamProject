@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "FpHPWidget.h"
 #include "GameFramework/Character.h"
+#include "Components/BoxComponent.h"
+#include "Engine.h"
 #include "FP_FirstPersonCharacter.generated.h"
 
 class UInputComponent;
@@ -36,6 +38,12 @@ class AFP_FirstPersonCharacter : public ACharacter
 
 public:
 	AFP_FirstPersonCharacter();
+
+
+	UPROPERTY(VisibleAnywhere)
+		class UStaticMeshComponent* SupportMesh;
+
+
 
 	UPROPERTY(BlueprintReadOnly)
 		float hp = 1.0f;
