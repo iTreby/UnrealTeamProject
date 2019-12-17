@@ -1,7 +1,7 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
 #include "FP_FirstPersonCharacter.h"
-#include "FirstPeronProjectile.h"
+#include "FirstPersonProjectile.h"
 #include "Animation/AnimInstance.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
@@ -10,6 +10,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/PlayerController.h"
 #include "DrawDebugHelpers.h"
+#include "ComboStatsWidget.h"
 #include "Enemy.h"
 
 #define COLLISION_WEAPON		ECC_GameTraceChannel1
@@ -21,11 +22,9 @@ DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
 AFP_FirstPersonCharacter::AFP_FirstPersonCharacter()
 {
-	//Adding Mesh for support robot
+  //Adding Mesh for support robot
 	SupportMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SupportMesh"));
 	SupportMesh->SetupAttachment(RootComponent);
-
-
 
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -117,11 +116,9 @@ void AFP_FirstPersonCharacter::SetupPlayerInputComponent(class UInputComponent* 
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AFP_FirstPersonCharacter::LookUpAtRate);
 
-
-
-	// freeze Enemy key binding
-	PlayerInputComponent->BindAction("Freeze", IE_Pressed, this, &AFP_FirstPersonCharacter::Freeze);
+  PlayerInputComponent->BindAction("Freeze", IE_Pressed, this, &AFP_FirstPersonCharacter::Freeze);
 	PlayerInputComponent->BindAction("Freeze", IE_Released, this, &AFP_FirstPersonCharacter::UnFreeze);
+
 }
 
 //void AFP_FirstPersonCharacter::SetHeadShotCombo() {
@@ -162,7 +159,6 @@ void AFP_FirstPersonCharacter::OnFire()
 
 				// spawn the projectile at the muzzle
 				World->SpawnActor<AFirstPeronProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
-				
 		}
 	}
 	/*

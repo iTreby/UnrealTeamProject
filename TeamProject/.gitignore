@@ -104,11 +104,11 @@ TeamProject/Intermediate/AssetRegistryCache/
 *.json
 
 
-TeamProject/Saved/*
+**/Saved/*
 
-TeamProject/Intermediate/*
+**/Intermediate/*
 
 **/.idea/
 
-TeamProject/cmake-build-debug/
+**/cmake-build-debug/
 

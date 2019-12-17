@@ -4,7 +4,7 @@
 #include "Enemy.h"
 #include "Components/BoxComponent.h"
 #include "Engine.h"
-#include "FirstPeronProjectile.h"
+#include "FirstPersonProjectile.h"
 #include "FP_FirstPersonCharacter.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
@@ -76,9 +76,8 @@ void AEnemy::NotifyHit (
         }
         Destroy();
 	}
-	//freeze enemy
-	else if (HP != 0 && isFreeze == true)
-	{   
+  else if (HP != 0 && isFreeze == true)
+	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Freeze")));
 		
 		CustomTimeDilation = 0;
