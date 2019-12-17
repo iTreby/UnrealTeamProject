@@ -10,6 +10,10 @@ UCLASS()
 class GAMEENGINEPROJECT_API AFirstPeronProjectile : public AActor
 {
 	GENERATED_BODY()
+
+public:
+    AFirstPeronProjectile();
+
 	UPROPERTY(VisibleDefaultsOnly, Category = Projectile)
 	class USphereComponent* CollisionComp;
 
@@ -24,9 +28,10 @@ protected:
 private:
     bool isHit = false;
 
-public:	
-	// Called every frame
-	AFirstPeronProjectile();
+public:
+
+    // Called every frame
+    virtual void Tick(float DeltaTime) override;
 
 	/** called when projectile hits something */
 	UFUNCTION()

@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include <Runtime/Engine/Classes/Kismet/GameplayStatics.h>
 #include "FirstPeronProjectile.h"
+#include <Runtime/Engine/Classes/Kismet/GameplayStatics.h>
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/SphereComponent.h"
 #include "Enemy.h"
@@ -13,7 +13,9 @@
 // Sets default values
 AFirstPeronProjectile::AFirstPeronProjectile()
 {
-	// Use a sphere as a simple collision representation
+    PrimaryActorTick.bCanEverTick = true;
+
+    // Use a sphere as a simple collision representation
 	CollisionComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));
 	CollisionComp->InitSphereRadius(5.0f);
 	CollisionComp->BodyInstance.SetCollisionProfileName("Projectile");
@@ -46,6 +48,13 @@ void AFirstPeronProjectile::BeginPlay()
 	
 }
 
+void AFirstPeronProjectile::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+    auto* comboGameState = Cast<AComboGameState>(UGameplayStatics::GetGameState(this));
+    comboGameState->DecreaseComboValue(DeltaTime);
+}
+
 void AFirstPeronProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	// Only add impulse and destroy projectile if we hit a physics
@@ -71,7 +80,7 @@ void AFirstPeronProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAct
         comboGameState->IncreaseComboValue(bodyPartMultiplier);
     }
 
-    // If hits something esle, counts as a miss
+    // If hits something else, counts as a miss
     if (OtherActor != NULL && !enemy && !isHit) {
         isHit = true;
         comboGameState->DecreaseComboValue();

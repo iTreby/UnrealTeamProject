@@ -26,8 +26,7 @@ void AComboGameState::IncreaseLevel() {
 
 // Decrease points over time
 void AComboGameState::DecreaseComboValue(float DeltaTime) {
-    CurrentPoint -= FMath::Clamp(CurrentPoint - DeltaTime * ComboBarDecreasingSpeed, 100.0f, 0.0f);
-    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("DecreaseComboValue::CurrentPoint %f"), CurrentPoint));
+    CurrentPoint = FMath::Clamp(CurrentPoint - DeltaTime * ComboBarDecreasingSpeed, 0.0f, 100.0f);
     if (CurrentPoint == 0) {
         DecreaseLevel();
     }
