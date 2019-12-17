@@ -12,7 +12,7 @@
 // Sets default values
 AFirstPeronProjectile::AFirstPeronProjectile()
 {
-    PrimaryActorTick.bCanEverTick = true;
+  PrimaryActorTick.bCanEverTick = true;
 
     // Use a sphere as a simple collision representation
 	CollisionComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));

@@ -11,6 +11,7 @@
 #include "GameFramework/PlayerController.h"
 #include "DrawDebugHelpers.h"
 #include "ComboStatsWidget.h"
+#include "Enemy.h"
 
 #define COLLISION_WEAPON		ECC_GameTraceChannel1
 
@@ -21,6 +22,10 @@ DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
 AFP_FirstPersonCharacter::AFP_FirstPersonCharacter()
 {
+  //Adding Mesh for support robot
+	SupportMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SupportMesh"));
+	SupportMesh->SetupAttachment(RootComponent);
+
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
@@ -77,13 +82,6 @@ void AFP_FirstPersonCharacter::BeginPlay()
         widget->AddToViewport();
     }
 
-//	if (ComboStatsWidget != NULL) {
-//        auto widget = CreateWidget<UComboStatsWidget>(UGameplayStatics::GetPlayerController(this, 0), ComboStatsWidget);
-//        auto* comboGameState = Cast<AComboGameState>(UGameplayStatics::GetGameState(this));
-//        widget->comboGameState = comboGameState;
-//        widget->AddToViewport();
-//	}
-
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
 	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
 
@@ -117,6 +115,10 @@ void AFP_FirstPersonCharacter::SetupPlayerInputComponent(class UInputComponent* 
 	PlayerInputComponent->BindAxis("TurnRate", this, &AFP_FirstPersonCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AFP_FirstPersonCharacter::LookUpAtRate);
+
+  PlayerInputComponent->BindAction("Freeze", IE_Pressed, this, &AFP_FirstPersonCharacter::Freeze);
+	PlayerInputComponent->BindAction("Freeze", IE_Released, this, &AFP_FirstPersonCharacter::UnFreeze);
+
 }
 
 //void AFP_FirstPersonCharacter::SetHeadShotCombo() {
@@ -314,4 +316,51 @@ void AFP_FirstPersonCharacter::TryEnableTouchscreenMovement(UInputComponent* Pla
 	PlayerInputComponent->BindTouch(EInputEvent::IE_Pressed, this, &AFP_FirstPersonCharacter::BeginTouch);
 	PlayerInputComponent->BindTouch(EInputEvent::IE_Released, this, &AFP_FirstPersonCharacter::EndTouch);
 	PlayerInputComponent->BindTouch(EInputEvent::IE_Repeat, this, &AFP_FirstPersonCharacter::TouchUpdate);	
+}
+
+//freeze enemy
+void AFP_FirstPersonCharacter::Freeze()
+{ 
+	auto outEnemyActors = TArray<AActor*>();
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AEnemy::StaticClass(),outEnemyActors);
+	auto enemyArray = TArray<AEnemy*>();
+	for (auto enemy : outEnemyActors) {
+		auto enemyAdd = Cast<AEnemy>(enemy);
+		if (enemyAdd != nullptr)
+		{
+
+			enemyArray.Add(enemyAdd);
+		}
+	}
+
+	if (enemyArray.Num() != 0) {
+
+		for (auto enemy: enemyArray) {
+
+			enemy->isFreeze = true;
+		}
+	}
+}
+
+void AFP_FirstPersonCharacter::UnFreeze()
+{
+	auto outEnemyActors = TArray<AActor*>();
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AEnemy::StaticClass(), outEnemyActors);
+	auto enemyArray = TArray<AEnemy*>();
+	for (auto enemy : outEnemyActors) {
+		auto enemyAdd = Cast<AEnemy>(enemy);
+		if (enemyAdd != nullptr)
+		{
+
+			enemyArray.Add(enemyAdd);
+		}
+	}
+
+	if (enemyArray.Num() != 0) {
+
+		for (auto enemy : enemyArray) {
+
+			enemy->isFreeze = false;
+		}
+	}
 }
