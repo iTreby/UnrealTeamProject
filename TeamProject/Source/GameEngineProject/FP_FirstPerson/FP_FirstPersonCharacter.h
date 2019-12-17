@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "FpHPWidget.h"
 #include "GameFramework/Character.h"
 #include "FP_FirstPersonCharacter.generated.h"
 
@@ -11,6 +12,7 @@ class UCameraComponent;
 class USkeletalMeshComponent;
 class USoundBase;
 class UAnimMontage;
+
 
 UCLASS(config=Game)
 class AFP_FirstPersonCharacter : public ACharacter
@@ -35,14 +37,11 @@ class AFP_FirstPersonCharacter : public ACharacter
 public:
 	AFP_FirstPersonCharacter();
 
-	UPROPERTY(EditAnywhere)
-		TSubclassOf<class UPlayerHPWidget> WidgetClass;
-
 	UPROPERTY(BlueprintReadOnly)
-		float Shield = 1.0f;
+		float hp = 1.0f;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-		float HP = 1.0f;
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UFpHPWidget> Widget;
 
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 	TSubclassOf<class AFirstPeronProjectile> ProjectileClass;
@@ -75,9 +74,20 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	float WeaponDamage;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	int headShotCount;
+
+	UPROPERTY(EditAnywhere)
+    float headShotTimer = 10.0f;
+
+private:
+    UPROPERTY()
+    FTimerHandle headShotTimerHandle;
+
 protected:
 
 	virtual void BeginPlay();
+  
 	/** Handler for a touch input beginning. */
 	void TouchStarted(const ETouchIndex::Type FingerIndex, const FVector Location);
 

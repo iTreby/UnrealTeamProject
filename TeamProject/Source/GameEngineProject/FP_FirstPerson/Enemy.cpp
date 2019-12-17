@@ -5,6 +5,8 @@
 #include "Components/BoxComponent.h"
 #include "Engine.h"
 #include "FirstPeronProjectile.h"
+#include "FP_FirstPersonCharacter.h"
+
 
 // Sets default values
 AEnemy::AEnemy()
@@ -42,6 +44,15 @@ void AEnemy::Tick(float DeltaTime)
 
 }
 
+AFP_FirstPersonCharacter* AEnemy::GetPlayer () {
+    TArray<AActor*> OutActors;
+    UGameplayStatics::GetAllActorsOfClass(GetWorld(), AFP_FirstPersonCharacter::StaticClass(), OutActors);
+    // Since there's always only 1 player in world, cast OutActors[0] right away
+    auto* player = Cast<AFP_FirstPersonCharacter>(OutActors[0]);
+    if (!player) return nullptr;
+    return player;
+};
+
 void AEnemy::NotifyHit (
         class UPrimitiveComponent *MyComp,
         class AActor *Other,
@@ -56,6 +67,10 @@ void AEnemy::NotifyHit (
     if (!projectile) { return ;}
     GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Black, FString::Printf(TEXT("Enemy::HP: %f"), HP));
     if (HP <= 0) {
+        auto* player = GetPlayer();
+        if (player && isHeadShot) {
+            player->headShotCount += 1;
+        }
         Destroy();
     }
 }
