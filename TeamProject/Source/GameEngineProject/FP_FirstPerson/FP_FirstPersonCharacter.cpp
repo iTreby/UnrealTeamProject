@@ -1,7 +1,7 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
 #include "FP_FirstPersonCharacter.h"
-#include "FirstPeronProjectile.h"
+#include "FirstPersonProjectile.h"
 #include "Animation/AnimInstance.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
@@ -10,6 +10,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/PlayerController.h"
 #include "DrawDebugHelpers.h"
+#include "ComboStatsWidget.h"
 
 #define COLLISION_WEAPON		ECC_GameTraceChannel1
 
@@ -75,6 +76,13 @@ void AFP_FirstPersonCharacter::BeginPlay()
         widget->Player = this;
         widget->AddToViewport();
     }
+
+//	if (ComboStatsWidget != NULL) {
+//        auto widget = CreateWidget<UComboStatsWidget>(UGameplayStatics::GetPlayerController(this, 0), ComboStatsWidget);
+//        auto* comboGameState = Cast<AComboGameState>(UGameplayStatics::GetGameState(this));
+//        widget->comboGameState = comboGameState;
+//        widget->AddToViewport();
+//	}
 
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
 	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));

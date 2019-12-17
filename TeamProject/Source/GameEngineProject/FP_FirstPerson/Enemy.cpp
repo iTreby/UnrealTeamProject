@@ -4,7 +4,7 @@
 #include "Enemy.h"
 #include "Components/BoxComponent.h"
 #include "Engine.h"
-#include "FirstPeronProjectile.h"
+#include "FirstPersonProjectile.h"
 #include "FP_FirstPersonCharacter.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
