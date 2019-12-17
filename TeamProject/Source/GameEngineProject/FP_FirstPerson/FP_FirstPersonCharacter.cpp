@@ -121,7 +121,7 @@ void AFP_FirstPersonCharacter::SetupPlayerInputComponent(class UInputComponent* 
 
 	// freeze Enemy key binding
 	PlayerInputComponent->BindAction("Freeze", IE_Pressed, this, &AFP_FirstPersonCharacter::Freeze);
-	PlayerInputComponent->BindAction("UnFreeze", IE_Pressed, this, &AFP_FirstPersonCharacter::UnFreeze);
+	PlayerInputComponent->BindAction("Freeze", IE_Released, this, &AFP_FirstPersonCharacter::UnFreeze);
 }
 
 //void AFP_FirstPersonCharacter::SetHeadShotCombo() {
