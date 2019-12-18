@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
+#include "Particles/ParticleSystem.h"
 #include "GameFramework/Character.h"
 #include "Components/BoxComponent.h"
 #include "GameCharacter.generated.h"
@@ -38,7 +39,7 @@ private:
 	int HighNoonTickCounter = 10;
 
 public:	
-
+	
 	//HighNoon
 	UPROPERTY(EditAnywhere)
 		float scanOffset;
@@ -47,12 +48,14 @@ public:
 	UPROPERTY(EditAnywhere)
 		float scanLength = 250;
 
+	UPROPERTY(EditAnywhere)
+		UParticleSystem* HighNoonKillParticle;
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 private:
 	void OnHighNoon();
 	void CallHighNoon();

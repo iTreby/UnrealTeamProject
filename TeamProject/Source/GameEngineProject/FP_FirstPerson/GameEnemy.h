@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "WidgetComponent.h"
 #include "GameEnemy.generated.h"
 
 UCLASS()
@@ -15,9 +16,21 @@ public:
 	// Sets default values for this character's properties
 	AGameEnemy();
 
+	UPROPERTY(EditAnywhere)
+		UWidgetComponent* HighNoonWidget;
+
+	UPROPERTY(BlueprintReadWrite)
+		bool IsBoss;
+
+	void IsHighNooned();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	FTimerHandle TimerHandle;
+	void RemoveHighNoon();
+	bool wasHighNooned;
 
 public:	
 	// Called every frame
@@ -25,5 +38,4 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 };
