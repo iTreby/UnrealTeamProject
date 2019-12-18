@@ -10,7 +10,7 @@
 #include "DrawDebugHelpers.h"
 #include "Engine.h"
 
-#define COLLISION_WEAPON		ECC_GameTraceChannel1
+#define COLLISION_WEAPON		ECC_GameTraceChannel3
 
 // Sets default values
 AGameCharacter::AGameCharacter()
@@ -41,6 +41,7 @@ void AGameCharacter::CallHighNoon()
 		//UGameplayStatics::PlaySoundAtLocation(this, HealSound, GetActorLocation()); Play High Noon
 		HighNoonCalled = true;
 		HighNoonOnCooldown = true;
+
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("It's High Noon")));
 		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AGameCharacter::OnHighNoon, .5f, true);
 	}
@@ -86,20 +87,34 @@ void AGameCharacter::OnHighNoon()
 			StartTrace = StartTrace + ShootDir * ((GetActorLocation() - StartTrace) | ShootDir);
 		}
 
-		//Throw Linetrace to each enemy actor hit in Scan Area
+		//Throw Linetrace to each enemy actor hit in Box Overlap Scan Area
+		//Then apply logic to only the actors in FoV (not behind walls)
 		for (AActor* enemyActor : out)
 		{
 			auto enemy = Cast<AGameEnemy>(enemyActor);
 
-			if (enemy != nullptr)
+			if (enemy != nullptr && !enemy->IsBoss)
 			{
 				const FVector EndTrace = enemyActor->GetActorLocation();
 				const FHitResult Impact = WeaponTrace(StartTrace, EndTrace);
 
-				if (HasFiredHighNoon && Impact.Actor == Cast<AGameEnemy>(enemyActor)) {
+				if (!HasFiredHighNoon){
+					enemy->IsHighNooned();
+				}
+
+				else if (HasFiredHighNoon && Impact.Actor == Cast<AGameEnemy>(enemyActor)) {
 					GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("ENEMY HIT")));
+					enemy->HighNoonWidget->SetVisibility(false);
+
+					if (HighNoonKillParticle != nullptr) {
+						UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), HighNoonKillParticle, enemy->GetActorTransform());
+					}
+
 					enemy->Destroy();
 					HighNoonTickCounter = 0;
+				}
+				if (HighNoonTickCounter == 0 || HasFiredHighNoon) {
+					enemy->HighNoonWidget->SetVisibility(false);
 				}
 			}
 		}
