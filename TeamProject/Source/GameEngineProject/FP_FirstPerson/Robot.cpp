@@ -4,6 +4,7 @@
 #include "Robot.h"
 #include "Components/BoxComponent.h"
 #include "Engine.h"
+#include "Enemy.h"
 #include "FP_FirstPersonCharacter.h"
 
 // Sets default values
@@ -38,7 +39,7 @@ void ARobot::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	if (isActorOn)
-	{
+	{	
 		FVector NewLocation = GetWorld()->GetFirstPlayerController()->GetPawn()->GetActorLocation();
 
 		AngleAxis += DeltaTime * Multiplier;
@@ -55,6 +56,7 @@ void ARobot::Tick(float DeltaTime)
 
 		FQuat QuatRotation = FQuat(NewRotation);
 
+		//SetActorLocation(NewLocation, false, 0, ETeleportType::None);
 		SetActorLocationAndRotation(NewLocation, QuatRotation, false, 0, ETeleportType::None);
 
 		
@@ -66,7 +68,13 @@ void ARobot::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherAc
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr))
 	{
 		isActorOn = true;
-		Player = Cast<AFP_FirstPersonCharacter>(OtherActor);
+		//Player = Cast<AFP_FirstPersonCharacter>(OtherActor);
+		auto Enemy = Cast<AEnemy>(OtherActor);
+		if (Enemy != nullptr) {
+			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Black, FString::Printf(TEXT("enemy Hit")));
+			Enemy->HP -= 0.1f;
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Black, FString::Printf(TEXT("Enemy::HP: %f"), Enemy->HP));
+		}
 		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Black, FString::Printf(TEXT("Player Hit")));
 	}
 }
