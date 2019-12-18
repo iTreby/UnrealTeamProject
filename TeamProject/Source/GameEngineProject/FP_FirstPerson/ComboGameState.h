@@ -9,13 +9,12 @@
 UENUM(BlueprintType)
 enum class EComboLevel : uint8
 {
-    D = 1,
-    C = 2,
-    B = 3,
-    A = 4,
-    S = 5,
+    D = 1 UMETA(DisplayName="D"),
+    C = 2 UMETA(DisplayName="C"),
+    B = 3 UMETA(DisplayName="B"),
+    A = 4 UMETA(DisplayName="A"),
+    S = 5 UMETA(DisplayName="S"),
 };
-
 
 /**
  * Class to handle Combo Meter feature
@@ -26,6 +25,12 @@ class GAMEENGINEPROJECT_API AComboGameState : public AGameStateBase
 	GENERATED_BODY()
 
 public:
+
+    UPROPERTY(EditAnywhere)
+    TSubclassOf<class UComboStatsWidget> ComboStatsWidget;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+    EComboLevel StyleLevel = EComboLevel::D;
 
     UPROPERTY(EditAnywhere, BlueprintReadOnly)
     float CurrentPoint = 0.0f;
@@ -57,6 +62,15 @@ private:
     UPROPERTY()
     // Maximum combo level player can reach (Denote: S)
     int MaxComboLevel = 5;
+
+
+protected:
+    // Called when the game starts or when spawned
+    virtual void BeginPlay() override;
+
+    EComboLevel GetComboLevelEnumByIndex(int index);
+
+//    FName GetComboLevelEnumAsString(EComboLevel EnumValue);
 
 public:
 
