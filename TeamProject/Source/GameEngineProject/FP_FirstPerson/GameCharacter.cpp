@@ -26,6 +26,8 @@ void AGameCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
+	HighNoonHud = CreateWidget<UHighNoonWidget>(UGameplayStatics::GetPlayerController(this, 0), Widget);
+	HighNoonHud->Player = this;
 }
 
 // Called every frame
@@ -41,7 +43,7 @@ void AGameCharacter::CallHighNoon()
 		//UGameplayStatics::PlaySoundAtLocation(this, HealSound, GetActorLocation()); Play High Noon
 		HighNoonCalled = true;
 		HighNoonOnCooldown = true;
-
+		HighNoonHud->AddToViewport();
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("It's High Noon")));
 		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AGameCharacter::OnHighNoon, .5f, true);
 	}
@@ -50,6 +52,7 @@ void AGameCharacter::CallHighNoon()
 	}
 }
 
+//Called every .5 Seconds for 5 seconds by CallHighNoon
 void AGameCharacter::OnHighNoon()
 {
 
@@ -99,6 +102,7 @@ void AGameCharacter::OnHighNoon()
 				const FHitResult Impact = WeaponTrace(StartTrace, EndTrace);
 
 				if (!HasFiredHighNoon){
+					ScannedEnemies++;
 					enemy->IsHighNooned();
 				}
 
@@ -111,10 +115,12 @@ void AGameCharacter::OnHighNoon()
 					}
 
 					enemy->Destroy();
+					ScannedEnemies = 0;
 					HighNoonTickCounter = 0;
 				}
 				if (HighNoonTickCounter == 0 || HasFiredHighNoon) {
 					enemy->HighNoonWidget->SetVisibility(false);
+					ScannedEnemies = 0;
 				}
 			}
 		}
@@ -122,6 +128,8 @@ void AGameCharacter::OnHighNoon()
 	
 	//High Noon Used / Ended - Reset, call cooldown
 	else {
+		ScannedEnemies = 0;
+		HighNoonHud->RemoveFromParent();
 		HasFiredHighNoon = false;
 		HighNoonCalled = false;
 		HighNoonTickCounter = 10;
