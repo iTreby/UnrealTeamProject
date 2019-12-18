@@ -19,6 +19,21 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 		class UBoxComponent* BoxComponent;
+	bool isActorOn = false;
+
+	float AngleAxis;
+
+	UPROPERTY(EditAnywhere, Category = Movement)
+		FVector Dimensions;
+
+	UPROPERTY(EditAnywhere, Category = Movement)
+		FVector AxisVector;
+
+	UPROPERTY(EditAnywhere, Category = Movement)
+		float Multiplier;
+
+
+
 private:
 	class AFP_FirstPersonCharacter* Player = nullptr;
 
