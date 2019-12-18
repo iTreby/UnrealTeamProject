@@ -3,6 +3,7 @@
 
 #include "GameCharacter.h"
 #include "GameEnemy.h"
+#include "TimerManager.h"
 #include "GameFramework/PlayerController.h"
 #include "Components/InputComponent.h"
 #include "Kismet/GameplayStatics.h"
@@ -16,6 +17,8 @@ AGameCharacter::AGameCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	//ScanBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Box"));
+	//ScanBox->AttachTo(camera);
 }
 
 // Called when the game starts or when spawned
@@ -32,76 +35,105 @@ void AGameCharacter::Tick(float DeltaTime)
 
 }
 
+void AGameCharacter::CallHighNoon() 
+{
+	if (!HighNoonOnCooldown && !HighNoonCalled) {
+		//UGameplayStatics::PlaySoundAtLocation(this, HealSound, GetActorLocation()); Play High Noon
+		HighNoonCalled = true;
+		HighNoonOnCooldown = true;
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("It's High Noon")));
+		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AGameCharacter::OnHighNoon, .5f, true);
+	}
+	else if (HighNoonCalled) {
+		HasFiredHighNoon = true;
+	}
+}
+
 void AGameCharacter::OnHighNoon()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("It's High Noon")));
 
-	TArray<TEnumAsByte<EObjectTypeQuery>> query;
-	TArray<AActor*> ignore;
-	TArray<AActor*> out;
-	auto camera = UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0);
-	this->SetActorRotation(camera->GetCameraRotation());
-	/*
-	FVector actorLocation = camera->GetCameraLocation();
-	actorLocation.X += scanOffset; // Create Scan infront of player so as to not scan for enemies behind player (outside of FoV)*/
+	if (HighNoonTickCounter != 0) {
+		HighNoonTickCounter--;
 
-	FVector actorLocation = GetActorLocation();
-	actorLocation.X += scanOffset;
-	UKismetSystemLibrary::BoxOverlapActors(this, actorLocation, FVector(scanWidth, scanWidth, 100), query, AGameEnemy::StaticClass(), ignore, out);
-	DrawDebugBox(GetWorld(), actorLocation, FVector(scanWidth, scanWidth, 100), FColor::Purple, true, -1, 0, 10);
-	FString result = FString::Printf(TEXT("%d actors in Scan Area"), out.Num());
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, result);
+		//Declare Overlap params
+		TArray<TEnumAsByte<EObjectTypeQuery>> query;
+		TArray<AActor*> ignore;
+		TArray<AActor*> out;
 
-	APlayerController* PlayerController = Cast<APlayerController>(GetController());
+		//Get Player Cam rotation and apply offset to only check infront of player (in Fov)
+		auto camera = UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0);
+		FVector scanLocation = ((camera->GetActorForwardVector() * scanOffset) + camera->GetCameraLocation());
 
-	FVector ShootDir = FVector::ZeroVector;
-	FVector StartTrace = FVector::ZeroVector;
+		//Throw overlap area
+		UKismetSystemLibrary::BoxOverlapActors(this, scanLocation, FVector(scanWidth, scanWidth, 500), query, AGameEnemy::StaticClass(), ignore, out);
+		DrawDebugBox(GetWorld(), scanLocation, FVector(scanWidth, scanWidth, 500), FColor::Purple, true, -1, 0, 10);
+		FString result = FString::Printf(TEXT("%d actors in Scan Area"), out.Num());
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, result);
 
-	if (PlayerController)
-	{
-		// Calculate the direction of fire and the start location for trace
-		FRotator CamRot;
-		PlayerController->GetPlayerViewPoint(StartTrace, CamRot);
-		ShootDir = CamRot.Vector();
+		APlayerController* PlayerController = Cast<APlayerController>(GetController());
 
-		// Adjust trace so there is nothing blocking the ray between the camera and the pawn, and calculate distance from adjusted start
-		StartTrace = StartTrace + ShootDir * ((GetActorLocation() - StartTrace) | ShootDir);
-	}
+		FVector ShootDir = FVector::ZeroVector;
+		FVector StartTrace = FVector::ZeroVector;
 
-	for (AActor* actor : out)
-	{
-		auto enemy = Cast<AGameEnemy>(actor);
-		
-		if (enemy != nullptr)
-		{	
-			const FVector EndTrace = actor->GetActorLocation();
-			const FHitResult Impact = WeaponTrace(StartTrace, EndTrace);
-			//AActor* DamagedActor = Impact.GetActor();
+		if (PlayerController)
+		{
+			// Calculate the direction of fire and the start location for trace
+			FRotator CamRot;
+			PlayerController->GetPlayerViewPoint(StartTrace, CamRot);
+			ShootDir = CamRot.Vector();
+
+			// Adjust trace so there is nothing blocking the ray between the camera and the pawn, and calculate distance from adjusted start
+			StartTrace = StartTrace + ShootDir * ((GetActorLocation() - StartTrace) | ShootDir);
+		}
+
+		//Throw Linetrace to each enemy actor hit in Scan Area
+		for (AActor* enemyActor : out)
+		{
+			auto enemy = Cast<AGameEnemy>(enemyActor);
+
+			if (enemy != nullptr)
+			{
+				const FVector EndTrace = enemyActor->GetActorLocation();
+				const FHitResult Impact = WeaponTrace(StartTrace, EndTrace);
+
+				if (HasFiredHighNoon && Impact.Actor == Cast<AGameEnemy>(enemyActor)) {
+					GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("ENEMY HIT")));
+					enemy->Destroy();
+					HighNoonTickCounter = 0;
+				}
+			}
 		}
 	}
-
-	// Calculate endpoint of trace
 	
-
-	// Check for impact
-	
-
-	// Deal with impact
-	
-
-
-//	ScanBox->SetCollisionEnabled = true;
+	//High Noon Used / Ended - Reset, call cooldown
+	else {
+		HasFiredHighNoon = false;
+		HighNoonCalled = false;
+		HighNoonTickCounter = 10;
+		GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+		HighNoonOnCooldown = true;
+		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AGameCharacter::CooldownHighNoon, 5, true);
+		//TimerHandle.Invalidate();
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("High Noon Over")));
+	}
 
 }
 
+void AGameCharacter::CooldownHighNoon() {
+	HighNoonOnCooldown = false;
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("High Noon Ready to use")));
+	GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+}
+
+//Throw custom linetrace (GameTrace4 Is Custom High Noon Linetrace that hits only Enemies)
 FHitResult AGameCharacter::WeaponTrace(const FVector& StartTrace, const FVector& EndTrace) const
 {
-	// Perform trace to retrieve hit info
 	FCollisionQueryParams TraceParams(SCENE_QUERY_STAT(WeaponTrace), true, Instigator);
 	TraceParams.bReturnPhysicalMaterial = true;
 
 	FHitResult Hit(ForceInit);
-	GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, COLLISION_WEAPON, TraceParams);
+	
+	GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, ECollisionChannel::ECC_GameTraceChannel4, TraceParams); 
 
 	DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor::Green, true);
 	return Hit;
@@ -116,7 +148,7 @@ void AGameCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	check(PlayerInputComponent);
 
 	// Bind jump events
-	PlayerInputComponent->BindAction("HighNoon", IE_Pressed, this, &AGameCharacter::OnHighNoon);
+	PlayerInputComponent->BindAction("HighNoon", IE_Pressed, this, &AGameCharacter::CallHighNoon);
 
 }
 
