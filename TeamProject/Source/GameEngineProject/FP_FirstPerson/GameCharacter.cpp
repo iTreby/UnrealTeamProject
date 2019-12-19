@@ -45,8 +45,10 @@ void AGameCharacter::CallHighNoon()
 		//UGameplayStatics::PlaySoundAtLocation(this, HealSound, GetActorLocation()); Play High Noon
 		HighNoonCalled = true;
 		HighNoonOnCooldown = true;
-		if (Widget != nullptr && ItsHighNoon != nullptr) {
+		if (Widget != nullptr) {
 			HighNoonHud->AddToViewport();
+		}
+		if(ItsHighNoon != nullptr){
 			UGameplayStatics::PlaySoundAtLocation(this, ItsHighNoon, GetActorLocation());
 		}
 
