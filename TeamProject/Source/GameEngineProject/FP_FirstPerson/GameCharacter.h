@@ -43,6 +43,9 @@ private:
 
 public:	
 	
+	UPROPERTY(BlueprintReadWrite)
+		int KillCount;
+
 	//HighNoon
 	UPROPERTY(EditAnywhere)
 		float scanOffset;
