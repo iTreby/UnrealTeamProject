@@ -114,6 +114,8 @@ void AGameCharacter::OnHighNoon()
 					enemy->IsHighNooned();
 				}
 
+				//Successful Linetrace - No object in FoV , clean hit
+				//Do Hit Logic
 				else if (HasFiredHighNoon && Impact.Actor == Cast<AGameEnemy>(enemyActor)) {
 					GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("ENEMY HIT")));
 					enemy->HighNoonWidget->SetVisibility(false);
@@ -125,6 +127,7 @@ void AGameCharacter::OnHighNoon()
 						UGameplayStatics::PlaySoundAtLocation(this, ExplodeSound, enemy->GetActorLocation());
 					}
 					enemy->Destroy();
+					KillCount++;
 					ScannedEnemies = 0;
 					HighNoonTickCounter = 0;
 				}
