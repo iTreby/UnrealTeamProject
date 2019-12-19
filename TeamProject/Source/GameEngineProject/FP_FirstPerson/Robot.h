@@ -32,6 +32,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = Movement)
 		float Multiplier;
 
+	UPROPERTY(EditAnywhere)
+		class USoundBase* RobotAtk;
+
+	UPROPERTY(EditAnywhere)
+		class USoundBase* RobotActivate;
 
 
 private:
