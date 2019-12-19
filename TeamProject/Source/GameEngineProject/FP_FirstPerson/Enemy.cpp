@@ -12,8 +12,6 @@
 AEnemy::AEnemy()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
 	//Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 	//RootComponent = Root;
 
@@ -76,7 +74,8 @@ void AEnemy::NotifyHit (
         }
         Destroy();
 	}
-  else if (HP != 0 && isFreeze == true)
+
+    if (HP != 0 && isFreeze == true)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Freeze")));
 		
