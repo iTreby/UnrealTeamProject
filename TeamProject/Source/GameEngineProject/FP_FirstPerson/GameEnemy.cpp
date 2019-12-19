@@ -20,12 +20,20 @@ void AGameEnemy::RemoveHighNoon()
 {
 	HighNoonWidget->SetVisibility(false);
 	GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+
+	if (Player != nullptr) {
+		Player->ScannedEnemies = 0;
+	}
+
 	wasHighNooned = false;
 }
 void AGameEnemy::IsHighNooned() 
 {
 	//Do once
 	if (wasHighNooned == false) {
+		if (Player != nullptr) {
+			Player->ScannedEnemies++;
+		}
 		wasHighNooned = true;
 		HighNoonWidget->SetVisibility(true);
 		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AGameEnemy::RemoveHighNoon, 5, true);

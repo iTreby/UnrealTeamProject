@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameCharacter.h"
 #include "GameFramework/Character.h"
 #include "WidgetComponent.h"
 #include "GameEnemy.generated.h"
@@ -22,6 +23,7 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		bool IsBoss;
 
+	class AGameCharacter* Player;
 	void IsHighNooned();
 
 protected:

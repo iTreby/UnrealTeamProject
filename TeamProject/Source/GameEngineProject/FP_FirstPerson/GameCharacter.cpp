@@ -17,8 +17,7 @@ AGameCharacter::AGameCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	//ScanBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Box"));
-	//ScanBox->AttachTo(camera);
+
 }
 
 // Called when the game starts or when spawned
@@ -26,8 +25,11 @@ void AGameCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	HighNoonHud = CreateWidget<UHighNoonWidget>(UGameplayStatics::GetPlayerController(this, 0), Widget);
-	HighNoonHud->Player = this;
+	if (Widget != nullptr) {
+		HighNoonHud = CreateWidget<UHighNoonWidget>(UGameplayStatics::GetPlayerController(this, 0), Widget);
+		HighNoonHud->Player = this;
+	}
+
 }
 
 // Called every frame
@@ -43,7 +45,13 @@ void AGameCharacter::CallHighNoon()
 		//UGameplayStatics::PlaySoundAtLocation(this, HealSound, GetActorLocation()); Play High Noon
 		HighNoonCalled = true;
 		HighNoonOnCooldown = true;
-		HighNoonHud->AddToViewport();
+		if (Widget != nullptr) {
+			HighNoonHud->AddToViewport();
+		}
+		if(ItsHighNoon != nullptr){
+			UGameplayStatics::PlaySoundAtLocation(this, ItsHighNoon, GetActorLocation());
+		}
+
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("It's High Noon")));
 		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AGameCharacter::OnHighNoon, .5f, true);
 	}
@@ -70,7 +78,7 @@ void AGameCharacter::OnHighNoon()
 
 		//Throw overlap area
 		UKismetSystemLibrary::BoxOverlapActors(this, scanLocation, FVector(scanWidth, scanWidth, 500), query, AGameEnemy::StaticClass(), ignore, out);
-		DrawDebugBox(GetWorld(), scanLocation, FVector(scanWidth, scanWidth, 500), FColor::Purple, true, -1, 0, 10);
+		//DrawDebugBox(GetWorld(), scanLocation, FVector(scanWidth, scanWidth, 500), FColor::Purple, true, -1, 0, 10);
 		FString result = FString::Printf(TEXT("%d actors in Scan Area"), out.Num());
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, result);
 
@@ -102,7 +110,7 @@ void AGameCharacter::OnHighNoon()
 				const FHitResult Impact = WeaponTrace(StartTrace, EndTrace);
 
 				if (!HasFiredHighNoon){
-					ScannedEnemies++;
+					enemy->Player = this;
 					enemy->IsHighNooned();
 				}
 
@@ -113,7 +121,9 @@ void AGameCharacter::OnHighNoon()
 					if (HighNoonKillParticle != nullptr) {
 						UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), HighNoonKillParticle, enemy->GetActorTransform());
 					}
-
+					if (ExplodeSound != nullptr) {
+						UGameplayStatics::PlaySoundAtLocation(this, ExplodeSound, enemy->GetActorLocation());
+					}
 					enemy->Destroy();
 					ScannedEnemies = 0;
 					HighNoonTickCounter = 0;
@@ -129,14 +139,15 @@ void AGameCharacter::OnHighNoon()
 	//High Noon Used / Ended - Reset, call cooldown
 	else {
 		ScannedEnemies = 0;
-		HighNoonHud->RemoveFromParent();
+		if (Widget != nullptr) {
+			HighNoonHud->RemoveFromParent();
+		}
 		HasFiredHighNoon = false;
 		HighNoonCalled = false;
 		HighNoonTickCounter = 10;
 		GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
 		HighNoonOnCooldown = true;
 		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AGameCharacter::CooldownHighNoon, 5, true);
-		//TimerHandle.Invalidate();
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("High Noon Over")));
 	}
 
@@ -158,7 +169,7 @@ FHitResult AGameCharacter::WeaponTrace(const FVector& StartTrace, const FVector&
 	
 	GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, ECollisionChannel::ECC_GameTraceChannel4, TraceParams); 
 
-	DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor::Green, true);
+	//DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor::Green, true);
 	return Hit;
 }
 
