@@ -50,8 +50,6 @@ void AFirstPeronProjectile::BeginPlay()
 void AFirstPeronProjectile::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-    auto* comboGameState = Cast<AComboGameState>(UGameplayStatics::GetGameState(this));
-    comboGameState->DecreaseComboValue(DeltaTime);
 }
 
 void AFirstPeronProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
