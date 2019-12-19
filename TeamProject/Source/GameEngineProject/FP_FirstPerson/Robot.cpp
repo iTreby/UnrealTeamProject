@@ -67,14 +67,14 @@ void ARobot::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherAc
 {
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr))
 	{
+		UGameplayStatics::PlaySoundAtLocation(this, RobotActivate, GetActorLocation());
 		isActorOn = true;
 		//Player = Cast<AFP_FirstPersonCharacter>(OtherActor);
 		auto Enemy = Cast<AEnemy>(OtherActor);
 		if (Enemy != nullptr) {
-			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Black, FString::Printf(TEXT("enemy Hit")));
+			UGameplayStatics::PlaySoundAtLocation(this, RobotAtk, GetActorLocation());
 			Enemy->HP -= 0.1f;
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Black, FString::Printf(TEXT("Enemy::HP: %f"), Enemy->HP));
 		}
-		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Black, FString::Printf(TEXT("Player Hit")));
 	}
 }
