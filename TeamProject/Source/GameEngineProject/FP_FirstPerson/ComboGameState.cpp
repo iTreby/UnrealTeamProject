@@ -6,15 +6,26 @@
 #include "Kismet/GameplayStatics.h"
 #include "ComboStatsWidget.h"
 
+AComboGameState::AComboGameState() {
+    PrimaryActorTick.bCanEverTick = true;
+}
 
 void AComboGameState::BeginPlay()
 {
     Super::BeginPlay();
+    GetWorldTimerManager().SetTimer(ResetComboTimerHandle, this, &AComboGameState::ResetCombo, ResetComboInterval, true);
+
     if (ComboStatsWidget != NULL) {
         auto widget = CreateWidget<UComboStatsWidget>(UGameplayStatics::GetPlayerController(this, 0), ComboStatsWidget);
         widget->comboGameState = this;
         widget->AddToViewport();
 	}
+}
+
+void AComboGameState::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+    DecreaseComboValue(DeltaTime);
 }
 
 EComboLevel AComboGameState::GetComboLevelEnumByIndex(int index) {
@@ -47,7 +58,6 @@ void AComboGameState::IncreaseLevel() {
 // Decrease points over time
 void AComboGameState::DecreaseComboValue(float DeltaTime) {
     CurrentPoint = FMath::Clamp(CurrentPoint - DeltaTime * ComboBarDecreasingSpeed, 0.0f, 100.0f);
-//    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("DecreaseComboValue::CurrentPoint %f"), CurrentPoint));
     if (CurrentPoint == 0) {
         DecreaseLevel();
     }
@@ -69,6 +79,13 @@ void AComboGameState::DecreaseLevel() {
     } else {
         CurrentPoint = 0;
     }
+}
+
+void AComboGameState::ResetCombo() {
+    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Cyan, TEXT("ResetCombo::Called"));
+    CurrentComboLevel = 1;
+    StyleLevel = EComboLevel::D;
+    CurrentPoint = 0.0f;
 }
 
 
