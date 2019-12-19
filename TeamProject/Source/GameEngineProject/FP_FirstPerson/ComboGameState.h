@@ -14,6 +14,8 @@ enum class EComboLevel : uint8
     B = 3 UMETA(DisplayName="B"),
     A = 4 UMETA(DisplayName="A"),
     S = 5 UMETA(DisplayName="S"),
+    SS = 6 UMETA(DisplayName="SS"),
+    SSS = 7 UMETA(DisplayName="SSS"),
 };
 
 /**
@@ -25,6 +27,7 @@ class GAMEENGINEPROJECT_API AComboGameState : public AGameStateBase
 	GENERATED_BODY()
 
 public:
+    AComboGameState();
 
     UPROPERTY(EditAnywhere)
     TSubclassOf<class UComboStatsWidget> ComboStatsWidget;
@@ -44,12 +47,6 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadOnly)
     float ComboBarDecreasingSpeed = 0.1f;
 
-    UPROPERTY(EditAnywhere, BlueprintReadOnly)
-    float ComboBarIncreasingValue;
-
-    UPROPERTY(EditAnywhere, BlueprintReadOnly)
-    bool isDecreasingComboBar = true;
-
     // If Player reaches 100 points, proceed to next combo level
     UPROPERTY(EditAnywhere, BlueprintReadOnly)
     float LevelPointThreshold = 100.0f;
@@ -58,10 +55,16 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadOnly)
     float MissDecreaseValue = 2;
 
+    UPROPERTY(EditAnywhere, BlueprintReadOnly)
+    float ResetComboInterval = 30.0f;
+
 private:
+    // Maximum combo level player can reach
     UPROPERTY()
-    // Maximum combo level player can reach (Denote: S)
-    int MaxComboLevel = 5;
+    int MaxComboLevel = 7;
+
+    UPROPERTY()
+    FTimerHandle ResetComboTimerHandle;
 
 
 protected:
@@ -70,9 +73,9 @@ protected:
 
     EComboLevel GetComboLevelEnumByIndex(int index);
 
-//    FName GetComboLevelEnumAsString(EComboLevel EnumValue);
-
 public:
+    // Called every frame
+    virtual void Tick(float DeltaTime) override;
 
     void IncreaseComboValue(float bodyPartMultiplier);
 
@@ -83,5 +86,7 @@ public:
     void IncreaseLevel();
 
     void DecreaseLevel();
+
+    void ResetCombo();
 
 };

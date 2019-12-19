@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
+#include "HighNoonWidget.h"
 #include "Particles/ParticleSystem.h"
 #include "GameFramework/Character.h"
 #include "Components/BoxComponent.h"
@@ -38,6 +39,8 @@ private:
 	bool HighNoonOnCooldown;
 	int HighNoonTickCounter = 10;
 
+	class UHighNoonWidget* HighNoonHud;
+
 public:	
 	
 	//HighNoon
@@ -47,9 +50,12 @@ public:
 		float scanWidth = 250;
 	UPROPERTY(EditAnywhere)
 		float scanLength = 250;
-
 	UPROPERTY(EditAnywhere)
 		UParticleSystem* HighNoonKillParticle;
+	UPROPERTY(BlueprintReadOnly)
+		int ScannedEnemies = 0;
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<class UHighNoonWidget> Widget;
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
