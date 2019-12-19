@@ -26,8 +26,14 @@ void AGameCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	HighNoonHud = CreateWidget<UHighNoonWidget>(UGameplayStatics::GetPlayerController(this, 0), Widget);
-	HighNoonHud->Player = this;
+	if (Widget != nullptr) {
+		HighNoonHud = CreateWidget<UHighNoonWidget>(UGameplayStatics::GetPlayerController(this, 0), Widget);
+		HighNoonHud->Player = this;
+	}
+
+	/*auto widget = CreateWidget<UHighNoonWidget>(UGameplayStatics::GetPlayerController(this, 0), Widget);
+	widget->Player = this;*/
+	//widget->AddToViewport();
 }
 
 // Called every frame
@@ -43,7 +49,11 @@ void AGameCharacter::CallHighNoon()
 		//UGameplayStatics::PlaySoundAtLocation(this, HealSound, GetActorLocation()); Play High Noon
 		HighNoonCalled = true;
 		HighNoonOnCooldown = true;
-		HighNoonHud->AddToViewport();
+		if (Widget != nullptr) {
+			HighNoonHud->AddToViewport();
+		}
+
+		//widget->AddToViewport();
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("It's High Noon")));
 		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AGameCharacter::OnHighNoon, .5f, true);
 	}
@@ -70,7 +80,7 @@ void AGameCharacter::OnHighNoon()
 
 		//Throw overlap area
 		UKismetSystemLibrary::BoxOverlapActors(this, scanLocation, FVector(scanWidth, scanWidth, 500), query, AGameEnemy::StaticClass(), ignore, out);
-		DrawDebugBox(GetWorld(), scanLocation, FVector(scanWidth, scanWidth, 500), FColor::Purple, true, -1, 0, 10);
+		//DrawDebugBox(GetWorld(), scanLocation, FVector(scanWidth, scanWidth, 500), FColor::Purple, true, -1, 0, 10);
 		FString result = FString::Printf(TEXT("%d actors in Scan Area"), out.Num());
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, result);
 
@@ -102,7 +112,7 @@ void AGameCharacter::OnHighNoon()
 				const FHitResult Impact = WeaponTrace(StartTrace, EndTrace);
 
 				if (!HasFiredHighNoon){
-					ScannedEnemies++;
+					enemy->Player = this;
 					enemy->IsHighNooned();
 				}
 
@@ -129,7 +139,10 @@ void AGameCharacter::OnHighNoon()
 	//High Noon Used / Ended - Reset, call cooldown
 	else {
 		ScannedEnemies = 0;
-		HighNoonHud->RemoveFromParent();
+		if (Widget != nullptr) {
+			HighNoonHud->RemoveFromParent();
+		}
+		//widget->AddToViewport();
 		HasFiredHighNoon = false;
 		HighNoonCalled = false;
 		HighNoonTickCounter = 10;
@@ -158,7 +171,7 @@ FHitResult AGameCharacter::WeaponTrace(const FVector& StartTrace, const FVector&
 	
 	GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, ECollisionChannel::ECC_GameTraceChannel4, TraceParams); 
 
-	DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor::Green, true);
+	//DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor::Green, true);
 	return Hit;
 }
 
