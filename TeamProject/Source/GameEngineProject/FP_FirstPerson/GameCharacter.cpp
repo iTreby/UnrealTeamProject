@@ -17,8 +17,7 @@ AGameCharacter::AGameCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	//ScanBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Box"));
-	//ScanBox->AttachTo(camera);
+
 }
 
 // Called when the game starts or when spawned
@@ -31,9 +30,6 @@ void AGameCharacter::BeginPlay()
 		HighNoonHud->Player = this;
 	}
 
-	/*auto widget = CreateWidget<UHighNoonWidget>(UGameplayStatics::GetPlayerController(this, 0), Widget);
-	widget->Player = this;*/
-	//widget->AddToViewport();
 }
 
 // Called every frame
@@ -49,11 +45,11 @@ void AGameCharacter::CallHighNoon()
 		//UGameplayStatics::PlaySoundAtLocation(this, HealSound, GetActorLocation()); Play High Noon
 		HighNoonCalled = true;
 		HighNoonOnCooldown = true;
-		if (Widget != nullptr) {
+		if (Widget != nullptr && ItsHighNoon != nullptr) {
 			HighNoonHud->AddToViewport();
+			UGameplayStatics::PlaySoundAtLocation(this, ItsHighNoon, GetActorLocation());
 		}
 
-		//widget->AddToViewport();
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("It's High Noon")));
 		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AGameCharacter::OnHighNoon, .5f, true);
 	}
@@ -123,7 +119,9 @@ void AGameCharacter::OnHighNoon()
 					if (HighNoonKillParticle != nullptr) {
 						UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), HighNoonKillParticle, enemy->GetActorTransform());
 					}
-
+					if (ExplodeSound != nullptr) {
+						UGameplayStatics::PlaySoundAtLocation(this, ExplodeSound, enemy->GetActorLocation());
+					}
 					enemy->Destroy();
 					ScannedEnemies = 0;
 					HighNoonTickCounter = 0;
@@ -142,14 +140,12 @@ void AGameCharacter::OnHighNoon()
 		if (Widget != nullptr) {
 			HighNoonHud->RemoveFromParent();
 		}
-		//widget->AddToViewport();
 		HasFiredHighNoon = false;
 		HighNoonCalled = false;
 		HighNoonTickCounter = 10;
 		GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
 		HighNoonOnCooldown = true;
 		GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AGameCharacter::CooldownHighNoon, 5, true);
-		//TimerHandle.Invalidate();
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, FString::Printf(TEXT("High Noon Over")));
 	}
 

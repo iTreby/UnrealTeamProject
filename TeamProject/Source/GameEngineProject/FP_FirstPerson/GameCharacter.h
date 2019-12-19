@@ -56,6 +56,10 @@ public:
 		int ScannedEnemies = 0;
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class UHighNoonWidget> Widget;
+	UPROPERTY(EditAnywhere)
+		class USoundBase* ItsHighNoon;
+	UPROPERTY(EditAnywhere)
+		class USoundBase* ExplodeSound;
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
